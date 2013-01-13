@@ -8,10 +8,17 @@
   </SettingsComponent>
   <RecentFiles>
     <RecentFiles>
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="230" fromTop="3" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:app.config" caret="0" fromTop="0" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ClientManager.cs" caret="530" fromTop="19" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="198" fromTop="2" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml" caret="266" fromTop="4" />
     </RecentFiles>
     <RecentEdits>
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="229" fromTop="3" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:app.config" caret="0" fromTop="0" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ClientManager.cs" caret="530" fromTop="19" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml" caret="941" fromTop="9" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml" caret="849" fromTop="3" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -21,8 +28,20 @@
     <Providers />
   </UnitTestRunner>
   <UnitTestRunnerNUnit>
-    <NUnitInstallDir IsNull="False">
-    </NUnitInstallDir>
+    <NUnitInstallDir>C:\Program Files\NUnit 2.6.1\bin\net-2.0\</NUnitInstallDir>
     <UseAddins>Never</UseAddins>
   </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="static" priority="1" />
+      <Item value="TeacherServiceClient`0" priority="1" />
+      <Item value="null" priority="1" />
+      <Item value="public" priority="0" />
+      <Item value="if" priority="0" />
+      <Item value="clientInstance" priority="2" />
+      <Item value="new" priority="0" />
+      <Item value="TeacherServiceClient" priority="0" />
+      <Item value="return" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
 </Configuration>

@@ -21,6 +21,12 @@ namespace VirtualClassroom.TeacherClient
     {
         public MainWindow()
         {
+            LoginWindow loginWindow = new LoginWindow();
+            if(loginWindow.ShowDialog() == true)
+            {
+                MessageBox.Show("Login successfull. Welcome!");
+            }
+
             InitializeComponent();
         }
     }

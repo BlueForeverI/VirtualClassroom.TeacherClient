@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" />
+  <xs:element name="LoginTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoginTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="LoginTeacherResult" nillable="true" type="q1:Teacher" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLesson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="lesson" nillable="true" type="q2:Lesson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLessonResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomeworksByTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="teacherId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHomeworksByTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetHomeworksByTeacherResult" nillable="true" type="q3:ArrayOfHomework" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLessonsByTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="teacherId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLessonsByTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetLessonsByTeacherResult" nillable="true" type="q4:ArrayOfLesson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubjectsByTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="teacherId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubjectsByTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetSubjectsByTeacherResult" nillable="true" type="q5:ArrayOfSubject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMark">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="homework" nillable="true" type="q6:Homework" />
+        <xs:element minOccurs="0" name="mark" nillable="true" type="xs:float" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddMarkResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
