@@ -28,6 +28,18 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="RemoveLessons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="lessons" nillable="true" type="q3:ArrayOfLesson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveLessonsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="GetHomeworksByTeacher">
     <xs:complexType>
       <xs:sequence>
@@ -38,7 +50,7 @@
   <xs:element name="GetHomeworksByTeacherResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetHomeworksByTeacherResult" nillable="true" type="q3:ArrayOfHomework" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetHomeworksByTeacherResult" nillable="true" type="q4:ArrayOfHomework" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -52,7 +64,7 @@
   <xs:element name="GetLessonsByTeacherResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetLessonsByTeacherResult" nillable="true" type="q4:ArrayOfLesson" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetLessonsByTeacherResult" nillable="true" type="q5:ArrayOfLesson" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -66,14 +78,14 @@
   <xs:element name="GetSubjectsByTeacherResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetSubjectsByTeacherResult" nillable="true" type="q5:ArrayOfSubject" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="GetSubjectsByTeacherResult" nillable="true" type="q6:ArrayOfSubject" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddMark">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="homework" nillable="true" type="q6:Homework" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" minOccurs="0" name="homework" nillable="true" type="q7:Homework" />
         <xs:element minOccurs="0" name="mark" nillable="true" type="xs:float" />
       </xs:sequence>
     </xs:complexType>

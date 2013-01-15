@@ -3,6 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Teacher Client" Height="350" Width="525">
     <Grid>
-        
+        <WrapPanel VerticalAlignment="Center">
+            <WrapPanel VerticalAlignment="Center">
+                <StackPanel x:Name="navigation" VerticalAlignment="Center">
+                    <Button x:Name="btnManageLessons" Click="btnManageLessons_Click">Manage Lessons</Button>
+                    <Button x:Name="btnViewHomeworks" Click="btnViewHomeworks_Click">View Homeworks</Button>
+                </StackPanel>
+            </WrapPanel>
+            <StackPanel>
+                <Frame x:Name="frameMainContent" NavigationUIVisibility="Hidden" />
+            </StackPanel>
+        </WrapPanel>
     </Grid>
 </Window>

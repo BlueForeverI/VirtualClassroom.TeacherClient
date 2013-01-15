@@ -869,6 +869,9 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/AddLesson", ReplyAction="http://tempuri.org/ITeacherService/AddLessonResponse")]
         void AddLesson(VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson lesson);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/RemoveLessons", ReplyAction="http://tempuri.org/ITeacherService/RemoveLessonsResponse")]
+        void RemoveLessons(VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson[] lessons);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/GetHomeworksByTeacher", ReplyAction="http://tempuri.org/ITeacherService/GetHomeworksByTeacherResponse")]
         VirtualClassroom.TeacherClient.TeacherServiceReference.Homework[] GetHomeworksByTeacher(int teacherId);
         
@@ -915,6 +918,10 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         
         public void AddLesson(VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson lesson) {
             base.Channel.AddLesson(lesson);
+        }
+        
+        public void RemoveLessons(VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson[] lessons) {
+            base.Channel.RemoveLessons(lessons);
         }
         
         public VirtualClassroom.TeacherClient.TeacherServiceReference.Homework[] GetHomeworksByTeacher(int teacherId) {

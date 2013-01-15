@@ -25,9 +25,22 @@ namespace VirtualClassroom.TeacherClient
             if(loginWindow.ShowDialog() == true)
             {
                 MessageBox.Show("Login successfull. Welcome!");
+                TeacherId = loginWindow.Teacher.Id;
             }
 
             InitializeComponent();
+        }
+
+        public static int TeacherId { get; private set; }
+
+        private void btnManageLessons_Click(object sender, RoutedEventArgs e)
+        {
+            this.frameMainContent.Source = new Uri("ManageLessonsPage.xaml", UriKind.Relative);    
+        }
+
+        private void btnViewHomeworks_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
