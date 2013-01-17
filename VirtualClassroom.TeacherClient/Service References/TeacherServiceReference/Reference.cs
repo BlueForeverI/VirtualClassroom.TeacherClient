@@ -750,6 +750,9 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         private System.DateTime DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FilenameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -793,6 +796,19 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
                 if ((this.DateField.Equals(value) != true)) {
                     this.DateField = value;
                     this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Filename {
+            get {
+                return this.FilenameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FilenameField, value) != true)) {
+                    this.FilenameField = value;
+                    this.RaisePropertyChanged("Filename");
                 }
             }
         }
@@ -859,6 +875,67 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="File", Namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services")]
+    [System.SerializableAttribute()]
+    public partial class File : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private byte[] ContentField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FilenameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Content {
+            get {
+                return this.ContentField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContentField, value) != true)) {
+                    this.ContentField = value;
+                    this.RaisePropertyChanged("Content");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Filename {
+            get {
+                return this.FilenameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FilenameField, value) != true)) {
+                    this.FilenameField = value;
+                    this.RaisePropertyChanged("Filename");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TeacherServiceReference.ITeacherService")]
     public interface ITeacherService {
@@ -881,8 +958,20 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacher", ReplyAction="http://tempuri.org/ITeacherService/GetSubjectsByTeacherResponse")]
         VirtualClassroom.TeacherClient.TeacherServiceReference.Subject[] GetSubjectsByTeacher(int teacherId);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/GetStudentsByTeacher", ReplyAction="http://tempuri.org/ITeacherService/GetStudentsByTeacherResponse")]
+        VirtualClassroom.TeacherClient.TeacherServiceReference.Student[] GetStudentsByTeacher(int teacherId);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/AddMark", ReplyAction="http://tempuri.org/ITeacherService/AddMarkResponse")]
         void AddMark(VirtualClassroom.TeacherClient.TeacherServiceReference.Homework homework, System.Nullable<float> mark);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/DownloadLessonContent", ReplyAction="http://tempuri.org/ITeacherService/DownloadLessonContentResponse")]
+        VirtualClassroom.TeacherClient.TeacherServiceReference.File DownloadLessonContent(int lessonId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/DownloadLessonHomework", ReplyAction="http://tempuri.org/ITeacherService/DownloadLessonHomeworkResponse")]
+        VirtualClassroom.TeacherClient.TeacherServiceReference.File DownloadLessonHomework(int lessonId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/DownloadSubmittedHomework", ReplyAction="http://tempuri.org/ITeacherService/DownloadSubmittedHomeworkResponse")]
+        VirtualClassroom.TeacherClient.TeacherServiceReference.File DownloadSubmittedHomework(int homeworkId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -936,8 +1025,24 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
             return base.Channel.GetSubjectsByTeacher(teacherId);
         }
         
+        public VirtualClassroom.TeacherClient.TeacherServiceReference.Student[] GetStudentsByTeacher(int teacherId) {
+            return base.Channel.GetStudentsByTeacher(teacherId);
+        }
+        
         public void AddMark(VirtualClassroom.TeacherClient.TeacherServiceReference.Homework homework, System.Nullable<float> mark) {
             base.Channel.AddMark(homework, mark);
+        }
+        
+        public VirtualClassroom.TeacherClient.TeacherServiceReference.File DownloadLessonContent(int lessonId) {
+            return base.Channel.DownloadLessonContent(lessonId);
+        }
+        
+        public VirtualClassroom.TeacherClient.TeacherServiceReference.File DownloadLessonHomework(int lessonId) {
+            return base.Channel.DownloadLessonHomework(lessonId);
+        }
+        
+        public VirtualClassroom.TeacherClient.TeacherServiceReference.File DownloadSubmittedHomework(int homeworkId) {
+            return base.Channel.DownloadSubmittedHomework(homeworkId);
         }
     }
 }

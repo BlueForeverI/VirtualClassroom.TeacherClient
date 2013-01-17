@@ -43,11 +43,35 @@
   <wsdl:message name="ITeacherService_GetSubjectsByTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetSubjectsByTeacherResponse" />
   </wsdl:message>
+  <wsdl:message name="ITeacherService_GetStudentsByTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentsByTeacher" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_GetStudentsByTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStudentsByTeacherResponse" />
+  </wsdl:message>
   <wsdl:message name="ITeacherService_AddMark_InputMessage">
     <wsdl:part name="parameters" element="tns:AddMark" />
   </wsdl:message>
   <wsdl:message name="ITeacherService_AddMark_OutputMessage">
     <wsdl:part name="parameters" element="tns:AddMarkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_DownloadLessonContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadLessonContent" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_DownloadLessonContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadLessonContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_DownloadLessonHomework_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadLessonHomework" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_DownloadLessonHomework_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadLessonHomeworkResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_DownloadSubmittedHomework_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadSubmittedHomework" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_DownloadSubmittedHomework_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadSubmittedHomeworkResponse" />
   </wsdl:message>
   <wsdl:portType name="ITeacherService">
     <wsdl:operation name="LoginTeacher">
@@ -74,9 +98,25 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacher" message="tns:ITeacherService_GetSubjectsByTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacherResponse" message="tns:ITeacherService_GetSubjectsByTeacher_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="GetStudentsByTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetStudentsByTeacher" message="tns:ITeacherService_GetStudentsByTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetStudentsByTeacherResponse" message="tns:ITeacherService_GetStudentsByTeacher_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="AddMark">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/AddMark" message="tns:ITeacherService_AddMark_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/AddMarkResponse" message="tns:ITeacherService_AddMark_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadLessonContent">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/DownloadLessonContent" message="tns:ITeacherService_DownloadLessonContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/DownloadLessonContentResponse" message="tns:ITeacherService_DownloadLessonContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadLessonHomework">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/DownloadLessonHomework" message="tns:ITeacherService_DownloadLessonHomework_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/DownloadLessonHomeworkResponse" message="tns:ITeacherService_DownloadLessonHomework_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DownloadSubmittedHomework">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/DownloadSubmittedHomework" message="tns:ITeacherService_DownloadSubmittedHomework_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/DownloadSubmittedHomeworkResponse" message="tns:ITeacherService_DownloadSubmittedHomework_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITeacherService" type="tns:ITeacherService">
@@ -135,8 +175,44 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="GetStudentsByTeacher">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetStudentsByTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="AddMark">
       <soap:operation soapAction="http://tempuri.org/ITeacherService/AddMark" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadLessonContent">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/DownloadLessonContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadLessonHomework">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/DownloadLessonHomework" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadSubmittedHomework">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/DownloadSubmittedHomework" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

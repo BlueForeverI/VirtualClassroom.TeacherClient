@@ -40,7 +40,7 @@ namespace VirtualClassroom.TeacherClient
 
         private void btnViewHomeworks_Click(object sender, RoutedEventArgs e)
         {
-
+            this.frameMainContent.Source = new Uri("ViewHomeworksPage.xaml", UriKind.Relative);
         }
     }
 }

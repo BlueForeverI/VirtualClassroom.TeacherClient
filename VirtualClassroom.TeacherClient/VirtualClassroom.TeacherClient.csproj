@@ -60,6 +60,9 @@
     <Compile Include="AddLessonWindow.xaml.cs">
       <DependentUpon>AddLessonWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddMarkWindow.xaml.cs">
+      <DependentUpon>AddMarkWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ClientManager.cs" />
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
@@ -72,7 +75,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ViewHomeworksPage.xaml.cs">
+      <DependentUpon>ViewHomeworksPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddLessonWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddMarkWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -93,6 +103,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageLessonsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewHomeworksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,10 +145,16 @@
     <None Include="Service References\TeacherServiceReference\TeacherService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.File.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Homework.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Student.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Subject.datasource">

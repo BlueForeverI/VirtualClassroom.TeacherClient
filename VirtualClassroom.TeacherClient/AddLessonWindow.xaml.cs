@@ -58,10 +58,10 @@ namespace VirtualClassroom.TeacherClient
             Lesson lesson = new Lesson();
             lesson.Name = txtName.Text;
             lesson.SubjectId = (this.comboSubjects.SelectedItem as Subject).Id;
-            lesson.Content = File.ReadAllBytes(this.txtContentPath.Text);
+            lesson.Content = System.IO.File.ReadAllBytes(this.txtContentPath.Text);
             lesson.ContentFilename = new FileInfo(txtContentPath.Text).Name;
             lesson.Date = DateTime.Parse(this.txtDate.Text);
-            lesson.HomeworkContent = File.ReadAllBytes(txtHomeworkPath.Text);
+            lesson.HomeworkContent = System.IO.File.ReadAllBytes(txtHomeworkPath.Text);
             lesson.HomeworkFilename = new FileInfo(txtHomeworkPath.Text).Name;
             lesson.HomeworkDeadline = DateTime.Parse(txtHomeworkDeadline.Text);
 

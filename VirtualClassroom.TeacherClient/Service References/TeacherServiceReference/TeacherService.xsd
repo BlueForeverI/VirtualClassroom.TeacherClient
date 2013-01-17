@@ -74,6 +74,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary" />
       <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Filename" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="LessonId" type="xs:int" />
       <xs:element minOccurs="0" name="Mark" nillable="true" type="xs:float" />
@@ -102,4 +103,11 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Lesson" nillable="true" type="tns:Lesson" />
+  <xs:complexType name="File">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Content" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="Filename" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="File" nillable="true" type="tns:File" />
 </xs:schema>
