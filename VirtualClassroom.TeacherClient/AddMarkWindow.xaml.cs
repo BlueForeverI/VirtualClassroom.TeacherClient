@@ -23,7 +23,7 @@ namespace VirtualClassroom.TeacherClient
             InitializeComponent();
         }
 
-        public float? Mark { get; private set; }
+        public float Mark { get; private set; }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {

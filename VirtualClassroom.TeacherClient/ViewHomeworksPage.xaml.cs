@@ -27,8 +27,7 @@ namespace VirtualClassroom.TeacherClient
         {
             InitializeComponent();
 
-            var homeworks1 = client.GetHomeworksByTeacher(MainWindow.TeacherId);
-            var homeworks = (from h in client.GetHomeworksByTeacher(MainWindow.TeacherId) 
+            var homeworks = (from h in client.GetHomeworksByTeacher(MainWindow.TeacherId, true) 
                              join l in client.GetLessonsByTeacher(MainWindow.TeacherId) on h.LessonId equals l.Id
                              join s in client.GetSubjectsByTeacher(MainWindow.TeacherId) on l.SubjectId equals s.Id
                              join st in client.GetStudentsByTeacher(MainWindow.TeacherId) on h.StudentId equals st.Id
@@ -62,9 +61,9 @@ namespace VirtualClassroom.TeacherClient
             AddMarkWindow addMarkWindow = new AddMarkWindow();
             if(addMarkWindow.ShowDialog() == true)
             {
-                float? mark = addMarkWindow.Mark;
+                float mark = addMarkWindow.Mark;
                 int homeworkId = int.Parse((this.dataGridHomeworks.SelectedItem as dynamic).Id.ToString());
-                client.AddMark(new Homework(){Id = homeworkId}, mark);
+                client.AddMark(new Mark(){HomeworkId = homeworkId, Value = mark});
                 MessageBox.Show("Mark added successfully!");
             }
         }

@@ -21,11 +21,11 @@
     <MetadataSource Address="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="TeacherService.wsdl" MetadataType="Wsdl" ID="d9bc1189-02d4-4916-bf27-8d156d640ff4" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?wsdl" />
-    <MetadataFile FileName="TeacherService.xsd" MetadataType="Schema" ID="8a49e0b1-d455-4b09-bfe1-4677354a4cde" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd2" />
-    <MetadataFile FileName="TeacherService1.xsd" MetadataType="Schema" ID="71260040-d006-4da0-89f5-52f954a96e08" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd1" />
-    <MetadataFile FileName="TeacherService2.xsd" MetadataType="Schema" ID="1262e571-8ec4-436a-8882-3652bab69e19" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd0" />
-    <MetadataFile FileName="TeacherService.disco" MetadataType="Disco" ID="74b1637d-efa7-4820-a8fc-58439570d428" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?disco" />
+    <MetadataFile FileName="TeacherService.wsdl" MetadataType="Wsdl" ID="79fc3239-d170-459c-a1d8-7fda19cdf1c2" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?wsdl" />
+    <MetadataFile FileName="TeacherService.xsd" MetadataType="Schema" ID="8e1dfdbe-860f-480c-9945-f3e75007c4b6" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TeacherService1.xsd" MetadataType="Schema" ID="d0e6b6cf-a33f-4edc-8654-f296baeb31cf" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TeacherService2.xsd" MetadataType="Schema" ID="cd96af4c-3101-4d99-97ff-aa64dacb8b43" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TeacherService.disco" MetadataType="Disco" ID="5c8a0b2a-bec0-4803-a104-68c370c52be3" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?disco" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

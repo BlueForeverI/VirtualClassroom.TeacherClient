@@ -171,9 +171,6 @@
     <WCFMetadataStorage Include="Service References\TeacherServiceReference\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\TeacherServiceReference\TeacherService.disco" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\TeacherServiceReference\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +181,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\TeacherServiceReference\TeacherService.disco" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

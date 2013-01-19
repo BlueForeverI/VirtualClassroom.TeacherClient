@@ -77,11 +77,28 @@
       <xs:element minOccurs="0" name="Filename" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="LessonId" type="xs:int" />
-      <xs:element minOccurs="0" name="Mark" nillable="true" type="xs:float" />
+      <xs:element minOccurs="0" name="Marks" nillable="true" type="tns:ArrayOfMark" />
       <xs:element minOccurs="0" name="StudentId" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="Homework" nillable="true" type="tns:Homework" />
+  <xs:complexType name="ArrayOfMark">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Mark" nillable="true" type="tns:Mark" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMark" nillable="true" type="tns:ArrayOfMark" />
+  <xs:complexType name="Mark">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="HomeworkId" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="LessonName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubjectName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" type="xs:float" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Mark" nillable="true" type="tns:Mark" />
   <xs:complexType name="ArrayOfLesson">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Lesson" nillable="true" type="tns:Lesson" />
