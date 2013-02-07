@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Windows;
@@ -30,18 +31,35 @@ namespace VirtualClassroom.TeacherClient
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            Teacher teacher = client.LoginTeacher(txtUsername.Text, txtPassword.Text);
-            if(teacher == null)
+            BackgroundWorker worker = new BackgroundWorker();
+            Teacher teacher = new Teacher();
+
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+
+            worker.DoWork += (o, ea) =>
             {
-                MessageBox.Show("Wrong username or password!", "Invalid login",
-                                MessageBoxButton.OK, MessageBoxImage.Error);
-            }
-            else
+                teacher = client.LoginTeacher(username, password);
+            };
+
+            worker.RunWorkerCompleted += (o, ea) =>
             {
-                this.Teacher = teacher;
-                this.DialogResult = true;
-                this.Close();
-            }
+                this.busyIndicator.IsBusy = false;
+                if (teacher == null)
+                {
+                    MessageBox.Show("Wrong username or password!", "Invalid login",
+                                    MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+                else
+                {
+                    this.Teacher = teacher;
+                    this.DialogResult = true;
+                    this.Close();
+                }
+            };
+
+            busyIndicator.IsBusy = true;
+            worker.RunWorkerAsync();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
