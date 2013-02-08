@@ -60,10 +60,10 @@ namespace VirtualClassroom.TeacherClient
             lesson.SubjectId = (this.comboSubjects.SelectedItem as Subject).Id;
             lesson.Content = System.IO.File.ReadAllBytes(this.txtContentPath.Text);
             lesson.ContentFilename = new FileInfo(txtContentPath.Text).Name;
-            lesson.Date = DateTime.Parse(this.txtDate.Text);
+            lesson.Date = (DateTime)this.datePicker.Value;
             lesson.HomeworkContent = System.IO.File.ReadAllBytes(txtHomeworkPath.Text);
             lesson.HomeworkFilename = new FileInfo(txtHomeworkPath.Text).Name;
-            lesson.HomeworkDeadline = DateTime.Parse(txtHomeworkDeadline.Text);
+            lesson.HomeworkDeadline = this.homeworkDeadlinePicker.Value;
 
             this.Lesson = lesson;
             this.DialogResult = true;

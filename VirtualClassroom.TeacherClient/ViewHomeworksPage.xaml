@@ -9,7 +9,7 @@
     <Grid>
         <GroupBox Header="Homeworks">
             <WrapPanel>
-                <DataGrid x:Name="dataGridHomeworks" AutoGenerateColumns="False">
+                <DataGrid x:Name="dataGridHomeworks" AutoGenerateColumns="False" Margin="0 0 10 0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Subject" Binding="{Binding Path=Subject}" />
                         <DataGridTextColumn Header="Lesson" Binding="{Binding Path=Lesson}" />
@@ -17,8 +17,8 @@
                     </DataGrid.Columns>
                 </DataGrid>
                 <StackPanel>
-                    <Button x:Name="btnDownloadHomework" Click="btnDownloadHomework_Click">Download Homework</Button>
-                    <Button x:Name="btnAddMatk" Click="btnAddMatk_Click">Add Mark</Button>
+                    <Button x:Name="btnDownloadHomework" Click="btnDownloadHomework_Click" Padding="5">Download Homework</Button>
+                    <Button x:Name="btnAddMatk" Click="btnAddMatk_Click" Padding="5" >Add Mark</Button>
                 </StackPanel>
             </WrapPanel>
         </GroupBox>

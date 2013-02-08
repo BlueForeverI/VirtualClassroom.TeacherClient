@@ -22,13 +22,17 @@ namespace VirtualClassroom.TeacherClient
         public MainWindow()
         {
             LoginWindow loginWindow = new LoginWindow();
+
             if(loginWindow.ShowDialog() == true)
             {
                 MessageBox.Show("Login successfull. Welcome!");
                 TeacherId = loginWindow.Teacher.Id;
+                InitializeComponent();
             }
-
-            InitializeComponent();
+            else
+            {
+                this.Close();
+            }            
         }
 
         public static int TeacherId { get; private set; }

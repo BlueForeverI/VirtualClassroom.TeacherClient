@@ -8,8 +8,8 @@
 
     <Grid>
         <GroupBox Header="Lessons">
-            <WrapPanel>
-                <DataGrid x:Name="dataGridLessons" AutoGenerateColumns="False">
+            <StackPanel Orientation="Horizontal">
+                <DataGrid x:Name="dataGridLessons" AutoGenerateColumns="False" Margin="0 0 10 0">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" />
                         <DataGridTextColumn Header="Subject" Binding="{Binding Path=Subject}" />
@@ -18,10 +18,10 @@
                     </DataGrid.Columns>
                 </DataGrid>
                 <StackPanel>
-                    <Button x:Name="btnAddLesson" Click="btnAddLesson_Click">Add Lesson</Button>
-                    <Button x:Name="btnRemoveLesson" Click="btnRemoveLesson_Click">Remove Lessons</Button>
+                    <Button x:Name="btnAddLesson" Click="btnAddLesson_Click" Padding="5">Add Lesson</Button>
+                    <Button x:Name="btnRemoveLesson" Click="btnRemoveLesson_Click" Padding="5">Remove Lessons</Button>
                 </StackPanel>
-            </WrapPanel>
+            </StackPanel>
         </GroupBox>
     </Grid>
 </Page>
