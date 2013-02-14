@@ -27,19 +27,19 @@ namespace VirtualClassroom.TeacherClient
         {
             InitializeComponent();
 
-            var homeworks = (from h in client.GetHomeworksByTeacher(MainWindow.TeacherId, true) 
-                             join l in client.GetLessonsByTeacher(MainWindow.TeacherId) on h.LessonId equals l.Id
-                             join s in client.GetSubjectsByTeacher(MainWindow.TeacherId) on l.SubjectId equals s.Id
-                             join st in client.GetStudentsByTeacher(MainWindow.TeacherId) on h.StudentId equals st.Id
-                             select new
-                                {
-                                    Id = h.Id,
-                                    Subject = s.Name,
-                                    Lesson = l.Name,
-                                    Student = st.FirstName + " " + st.MiddleName + " " + st.LastName
-                                }).Distinct().ToList();
+            //var homeworks = (from h in client.GetHomeworksByTeacher(MainWindow.TeacherId, true) 
+            //                 join l in client.GetLessonsByTeacher(MainWindow.TeacherId) on h.LessonId equals l.Id
+            //                 join s in client.GetSubjectsByTeacher(MainWindow.TeacherId) on l.SubjectId equals s.Id
+            //                 join st in client.GetStudentsByTeacher(MainWindow.TeacherId) on h.StudentId equals st.Id
+            //                 select new
+            //                    {
+            //                        Id = h.Id,
+            //                        Subject = s.Name,
+            //                        Lesson = l.Name,
+            //                        Student = st.FirstName + " " + st.MiddleName + " " + st.LastName
+            //                    }).Distinct().ToList();
 
-            this.dataGridHomeworks.ItemsSource = homeworks;
+            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.TeacherId, false);
         }
 
         private void btnDownloadHomework_Click(object sender, RoutedEventArgs e)

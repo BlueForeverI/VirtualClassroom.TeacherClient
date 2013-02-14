@@ -35,7 +35,7 @@ namespace VirtualClassroom.TeacherClient
             Teacher teacher = new Teacher();
 
             string username = txtUsername.Text;
-            string password = txtPassword.Text;
+            string password = txtPassword.Password;
 
             worker.DoWork += (o, ea) =>
             {

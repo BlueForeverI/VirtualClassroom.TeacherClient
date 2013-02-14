@@ -152,16 +152,16 @@
     <None Include="Service References\TeacherServiceReference\TeacherService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\TeacherServiceReference\TeacherService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.File.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Homework.datasource">
+    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.HomeworkView.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Student.datasource">
+    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.LessonView.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Subject.datasource">

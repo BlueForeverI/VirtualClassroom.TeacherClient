@@ -13,7 +13,7 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Subject" Binding="{Binding Path=Subject}" />
                         <DataGridTextColumn Header="Lesson" Binding="{Binding Path=Lesson}" />
-                        <DataGridTextColumn Header="Student" Binding="{Binding Path=Student}" />
+                        <DataGridTextColumn Header="Student" Binding="{Binding Path=StudentFullName}" />
                     </DataGrid.Columns>
                 </DataGrid>
                 <StackPanel>

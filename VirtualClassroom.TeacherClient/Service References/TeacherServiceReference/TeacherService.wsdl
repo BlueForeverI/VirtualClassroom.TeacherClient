@@ -4,7 +4,8 @@
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services" />
+      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" />
+      <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Views" />
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="ITeacherService_LoginTeacher_InputMessage">
@@ -25,29 +26,23 @@
   <wsdl:message name="ITeacherService_RemoveLessons_OutputMessage">
     <wsdl:part name="parameters" element="tns:RemoveLessonsResponse" />
   </wsdl:message>
-  <wsdl:message name="ITeacherService_GetHomeworksByTeacher_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetHomeworksByTeacher" />
+  <wsdl:message name="ITeacherService_GetHomeworkViewsByTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeworkViewsByTeacher" />
   </wsdl:message>
-  <wsdl:message name="ITeacherService_GetHomeworksByTeacher_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetHomeworksByTeacherResponse" />
+  <wsdl:message name="ITeacherService_GetHomeworkViewsByTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHomeworkViewsByTeacherResponse" />
   </wsdl:message>
-  <wsdl:message name="ITeacherService_GetLessonsByTeacher_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetLessonsByTeacher" />
+  <wsdl:message name="ITeacherService_GetLessonViewsByTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLessonViewsByTeacher" />
   </wsdl:message>
-  <wsdl:message name="ITeacherService_GetLessonsByTeacher_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetLessonsByTeacherResponse" />
+  <wsdl:message name="ITeacherService_GetLessonViewsByTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLessonViewsByTeacherResponse" />
   </wsdl:message>
   <wsdl:message name="ITeacherService_GetSubjectsByTeacher_InputMessage">
     <wsdl:part name="parameters" element="tns:GetSubjectsByTeacher" />
   </wsdl:message>
   <wsdl:message name="ITeacherService_GetSubjectsByTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetSubjectsByTeacherResponse" />
-  </wsdl:message>
-  <wsdl:message name="ITeacherService_GetStudentsByTeacher_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetStudentsByTeacher" />
-  </wsdl:message>
-  <wsdl:message name="ITeacherService_GetStudentsByTeacher_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetStudentsByTeacherResponse" />
   </wsdl:message>
   <wsdl:message name="ITeacherService_AddMark_InputMessage">
     <wsdl:part name="parameters" element="tns:AddMark" />
@@ -86,21 +81,17 @@
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/RemoveLessons" message="tns:ITeacherService_RemoveLessons_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/RemoveLessonsResponse" message="tns:ITeacherService_RemoveLessons_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetHomeworksByTeacher">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetHomeworksByTeacher" message="tns:ITeacherService_GetHomeworksByTeacher_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetHomeworksByTeacherResponse" message="tns:ITeacherService_GetHomeworksByTeacher_OutputMessage" />
+    <wsdl:operation name="GetHomeworkViewsByTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacher" message="tns:ITeacherService_GetHomeworkViewsByTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacherResponse" message="tns:ITeacherService_GetHomeworkViewsByTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetLessonsByTeacher">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetLessonsByTeacher" message="tns:ITeacherService_GetLessonsByTeacher_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetLessonsByTeacherResponse" message="tns:ITeacherService_GetLessonsByTeacher_OutputMessage" />
+    <wsdl:operation name="GetLessonViewsByTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetLessonViewsByTeacher" message="tns:ITeacherService_GetLessonViewsByTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetLessonViewsByTeacherResponse" message="tns:ITeacherService_GetLessonViewsByTeacher_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetSubjectsByTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacher" message="tns:ITeacherService_GetSubjectsByTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacherResponse" message="tns:ITeacherService_GetSubjectsByTeacher_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetStudentsByTeacher">
-      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetStudentsByTeacher" message="tns:ITeacherService_GetStudentsByTeacher_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetStudentsByTeacherResponse" message="tns:ITeacherService_GetStudentsByTeacher_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddMark">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/AddMark" message="tns:ITeacherService_AddMark_InputMessage" />
@@ -148,8 +139,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetHomeworksByTeacher">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetHomeworksByTeacher" style="document" />
+    <wsdl:operation name="GetHomeworkViewsByTeacher">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacher" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -157,8 +148,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetLessonsByTeacher">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetLessonsByTeacher" style="document" />
+    <wsdl:operation name="GetLessonViewsByTeacher">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetLessonViewsByTeacher" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -168,15 +159,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetSubjectsByTeacher">
       <soap:operation soapAction="http://tempuri.org/ITeacherService/GetSubjectsByTeacher" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetStudentsByTeacher">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetStudentsByTeacher" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
