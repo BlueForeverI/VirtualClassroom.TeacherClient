@@ -20,10 +20,12 @@ namespace VirtualClassroom.TeacherClient
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private TeacherServiceClient client = ClientManager.GetClient();
+        private TeacherServiceClient client;
 
         public LoginWindow()
         {
+            ClientManager.CloseClient();
+            client = ClientManager.GetClient();
             InitializeComponent();
         }
 

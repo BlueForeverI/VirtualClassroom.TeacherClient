@@ -46,5 +46,10 @@ namespace VirtualClassroom.TeacherClient
         {
             this.frameMainContent.Source = new Uri("ViewHomeworksPage.xaml", UriKind.Relative);
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            ClientManager.CloseClient();
+        }
     }
 }
