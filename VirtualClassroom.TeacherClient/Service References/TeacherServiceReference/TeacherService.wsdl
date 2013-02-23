@@ -44,6 +44,12 @@
   <wsdl:message name="ITeacherService_GetSubjectsByTeacher_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetSubjectsByTeacherResponse" />
   </wsdl:message>
+  <wsdl:message name="ITeacherService_GetMarkViewsByTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarkViewsByTeacher" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_GetMarkViewsByTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMarkViewsByTeacherResponse" />
+  </wsdl:message>
   <wsdl:message name="ITeacherService_AddMark_InputMessage">
     <wsdl:part name="parameters" element="tns:AddMark" />
   </wsdl:message>
@@ -92,6 +98,10 @@
     <wsdl:operation name="GetSubjectsByTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacher" message="tns:ITeacherService_GetSubjectsByTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacherResponse" message="tns:ITeacherService_GetSubjectsByTeacher_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkViewsByTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetMarkViewsByTeacher" message="tns:ITeacherService_GetMarkViewsByTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetMarkViewsByTeacherResponse" message="tns:ITeacherService_GetMarkViewsByTeacher_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="AddMark">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/AddMark" message="tns:ITeacherService_AddMark_InputMessage" />
@@ -159,6 +169,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetSubjectsByTeacher">
       <soap:operation soapAction="http://tempuri.org/ITeacherService/GetSubjectsByTeacher" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMarkViewsByTeacher">
+      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetMarkViewsByTeacher" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

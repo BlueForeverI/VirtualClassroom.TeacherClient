@@ -9,6 +9,7 @@
             <WrapPanel x:Name="navigation" VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="0 10 0 20">
                 <Button x:Name="btnManageLessons" Click="btnManageLessons_Click" Padding="20" >Manage Lessons</Button>
                 <Button x:Name="btnViewHomeworks" Click="btnViewHomeworks_Click" Padding="20">View Homeworks</Button>
+                <Button x:Name="btnViewMarks" Click="btnViewMarks_Click" Padding="20">View Marks</Button>
             </WrapPanel>
            
             <StackPanel>

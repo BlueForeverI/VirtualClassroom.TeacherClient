@@ -84,10 +84,24 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetMarkViewsByTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="teacherId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMarkViewsByTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Views" minOccurs="0" name="GetMarkViewsByTeacherResult" nillable="true" type="q7:ArrayOfMarkView" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="AddMark">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="mark" nillable="true" type="q7:Mark" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="mark" nillable="true" type="q8:Mark" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -106,7 +120,7 @@
   <xs:element name="DownloadLessonContentResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="DownloadLessonContentResult" nillable="true" type="q8:File" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="DownloadLessonContentResult" nillable="true" type="q9:File" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -120,7 +134,7 @@
   <xs:element name="DownloadLessonHomeworkResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="DownloadLessonHomeworkResult" nillable="true" type="q9:File" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="DownloadLessonHomeworkResult" nillable="true" type="q10:File" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -134,7 +148,7 @@
   <xs:element name="DownloadSubmittedHomeworkResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="DownloadSubmittedHomeworkResult" nillable="true" type="q10:File" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="DownloadSubmittedHomeworkResult" nillable="true" type="q11:File" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

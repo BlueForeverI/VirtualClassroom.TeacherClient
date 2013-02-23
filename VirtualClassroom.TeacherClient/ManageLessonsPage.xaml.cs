@@ -33,18 +33,6 @@ namespace VirtualClassroom.TeacherClient
 
         void UpdateDataGrid()
         {
-            //var lessons = (from l in client.GetLessonsByTeacher(this.id)
-            //               from s in this.subjects
-            //               where l.SubjectId == s.Id
-            //               select new
-            //               {
-            //                   Id = l.Id,
-            //                   Name = l.Name,
-            //                   Subject = s.Name,
-            //                   Date = l.Date,
-            //                   HomeworkDeadline = l.HomeworkDeadline
-            //               }).ToList();
-
             this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.TeacherId);
         }
 

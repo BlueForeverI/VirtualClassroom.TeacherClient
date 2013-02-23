@@ -81,6 +81,9 @@
     <Compile Include="ViewHomeworksPage.xaml.cs">
       <DependentUpon>ViewHomeworksPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewMarksPage.xaml.cs">
+      <DependentUpon>ViewMarksPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddLessonWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -114,6 +117,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="ViewHomeworksPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewMarksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,6 +169,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.LessonView.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.MarkView.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Subject.datasource">
