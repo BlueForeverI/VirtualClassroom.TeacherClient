@@ -1,0 +1,14 @@
+﻿<Window x:Class="VirtualClassroom.TeacherClient.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:TeacherClient="clr-namespace:VirtualClassroom.TeacherClient" 
+        Title="Editor" SizeToContent="WidthAndHeight" 
+        Background="{DynamicResource WindowBackgroundBrush}">
+    <Window.Resources>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <TeacherClient:DocumentEditor x:Name="docEditor" />
+            <Button x:Name="btnAddContent" Click="btnAddContent_Click" Width="120" >Add Content</Button>
+        </StackPanel>
+    </Grid>
+</Window>

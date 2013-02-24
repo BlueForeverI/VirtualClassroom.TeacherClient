@@ -24,6 +24,7 @@
                 <Label>Content File: </Label>
                 <TextBox x:Name="txtContentPath" Width="150" Margin="10 0 0 0"/>
                 <Button x:Name="btnBrowseContent" Click="btnBrowseContent_Click" Margin="10 0 0 0" >Browse</Button>
+                <Button x:Name="btnOpenEditorContent" Click="btnOpenEditorContent_Click" Margin="10 0 0 0">Open Editor</Button>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>Date: </Label>
@@ -33,6 +34,7 @@
                 <Label>Homework File: </Label>
                 <TextBox x:Name="txtHomeworkPath" Width="150" Margin="10 0 0 0"/>
                 <Button x:Name="btnBrowseHomework" Click="btnBrowseHomework_Click" Margin="10 0 0 0">Browse</Button>
+                <Button x:Name="btnOpenEditorHomework" Click="btnOpenEditorHomework_Click" Margin="10 0 0 0">Open Editor</Button>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>Homework Deadline: </Label>

@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Html2Xaml">
+      <HintPath>..\..\DocumentEditorWpf\DocumentEditorTestApp\bin\Debug\Html2Xaml.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
@@ -67,6 +70,12 @@
       <DependentUpon>AddMarkWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ClientManager.cs" />
+    <Compile Include="DocumentEditor.xaml.cs">
+      <DependentUpon>DocumentEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditorWindow.xaml.cs">
+      <DependentUpon>EditorWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
@@ -89,6 +98,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddMarkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DocumentEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="EditorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -201,6 +218,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\TeacherServiceReference\TeacherService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Bold.png" />
+    <Resource Include="Images\Bullets.png" />
+    <Resource Include="Images\CenterAlign.png" />
+    <Resource Include="Images\Copy.png" />
+    <Resource Include="Images\Cut.png" />
+    <Resource Include="Images\Delete.png" />
+    <Resource Include="Images\Indent.png" />
+    <Resource Include="Images\IndentRemove.png" />
+    <Resource Include="Images\Italic.png" />
+    <Resource Include="Images\JustifyAlign.png" />
+    <Resource Include="Images\LeftAlign.png" />
+    <Resource Include="Images\Numbering.png" />
+    <Resource Include="Images\Paste.png" />
+    <Resource Include="Images\Redo.png" />
+    <Resource Include="Images\RightAlign.png" />
+    <Resource Include="Images\Subscript.png" />
+    <Resource Include="Images\Superscript.png" />
+    <Resource Include="Images\Underline.png" />
+    <Resource Include="Images\Undo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
