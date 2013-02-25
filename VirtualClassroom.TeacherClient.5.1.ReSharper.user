@@ -19,8 +19,6 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ClientManager.cs" caret="477" fromTop="16" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="862" fromTop="11" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="1111" fromTop="6" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml" caret="577" fromTop="2" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1676" fromTop="17" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml.cs" caret="473" fromTop="16" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:EditorWindow.xaml.cs" caret="1166" fromTop="6" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml.cs" caret="1602" fromTop="6" />
@@ -33,13 +31,10 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:DocumentEditor.xaml" caret="6925" fromTop="5" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="2071" fromTop="8" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="2957" fromTop="0" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="913" fromTop="17" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml" caret="917" fromTop="6" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="368" fromTop="2" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="1111" fromTop="9" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml.cs" caret="690" fromTop="22" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml.cs" caret="871" fromTop="28" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:DocumentEditor.xaml.cs" caret="539" fromTop="10" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:DocumentEditor.xaml.cs" caret="687" fromTop="24" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:DocumentEditor.xaml" caret="67" fromTop="0" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:EditorWindow.xaml" caret="535" fromTop="5" />
@@ -65,6 +60,11 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="2096" fromTop="6" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="3481" fromTop="35" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="2957" fromTop="20" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1396" fromTop="16" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1021" fromTop="21" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="681" fromTop="9" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="913" fromTop="17" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml" caret="1016" fromTop="7" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -145,7 +145,7 @@
       <Item value="PenLineJoin`0" priority="1" />
       <Item value="join" priority="4" />
       <Item value="homeworks" priority="1" />
-      <Item value="IO" priority="2" />
+      <Item value="IO" priority="3" />
       <Item value="long" priority="0" />
       <Item value="on" priority="1" />
       <Item value="equals" priority="2" />
@@ -156,7 +156,7 @@
       <Item value="saveFileDialog" priority="3" />
       <Item value="SaveFileDialog" priority="0" />
       <Item value="System" priority="0" />
-      <Item value="homework" priority="0" />
+      <Item value="homework" priority="1" />
       <Item value="float" priority="2" />
       <Item value="AddMarkWindow`0" priority="0" />
       <Item value="addMarkWindow" priority="2" />

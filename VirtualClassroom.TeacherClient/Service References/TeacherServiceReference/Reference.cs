@@ -1010,6 +1010,9 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasMarkField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1028,6 +1031,19 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasMark {
+            get {
+                return this.HasMarkField;
+            }
+            set {
+                if ((this.HasMarkField.Equals(value) != true)) {
+                    this.HasMarkField = value;
+                    this.RaisePropertyChanged("HasMark");
+                }
             }
         }
         
@@ -1106,6 +1122,9 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         private System.DateTime DateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool HasHomeworkField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<System.DateTime> HomeworkDeadlineField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1113,6 +1132,9 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool SentHomeworkField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SubjectField;
@@ -1136,6 +1158,19 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
                 if ((this.DateField.Equals(value) != true)) {
                     this.DateField = value;
                     this.RaisePropertyChanged("Date");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool HasHomework {
+            get {
+                return this.HasHomeworkField;
+            }
+            set {
+                if ((this.HasHomeworkField.Equals(value) != true)) {
+                    this.HasHomeworkField = value;
+                    this.RaisePropertyChanged("HasHomework");
                 }
             }
         }
@@ -1175,6 +1210,19 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
                 if ((object.ReferenceEquals(this.NameField, value) != true)) {
                     this.NameField = value;
                     this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool SentHomework {
+            get {
+                return this.SentHomeworkField;
+            }
+            set {
+                if ((this.SentHomeworkField.Equals(value) != true)) {
+                    this.SentHomeworkField = value;
+                    this.RaisePropertyChanged("SentHomework");
                 }
             }
         }
@@ -1418,7 +1466,7 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         void RemoveLessons(VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson[] lessons);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacher", ReplyAction="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacherResponse")]
-        VirtualClassroom.TeacherClient.TeacherServiceReference.HomeworkView[] GetHomeworkViewsByTeacher(int teacherId, bool unrated);
+        VirtualClassroom.TeacherClient.TeacherServiceReference.HomeworkView[] GetHomeworkViewsByTeacher(int teacherId);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/GetLessonViewsByTeacher", ReplyAction="http://tempuri.org/ITeacherService/GetLessonViewsByTeacherResponse")]
         VirtualClassroom.TeacherClient.TeacherServiceReference.LessonView[] GetLessonViewsByTeacher(int teacherId);
@@ -1481,8 +1529,8 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
             base.Channel.RemoveLessons(lessons);
         }
         
-        public VirtualClassroom.TeacherClient.TeacherServiceReference.HomeworkView[] GetHomeworkViewsByTeacher(int teacherId, bool unrated) {
-            return base.Channel.GetHomeworkViewsByTeacher(teacherId, unrated);
+        public VirtualClassroom.TeacherClient.TeacherServiceReference.HomeworkView[] GetHomeworkViewsByTeacher(int teacherId) {
+            return base.Channel.GetHomeworkViewsByTeacher(teacherId);
         }
         
         public VirtualClassroom.TeacherClient.TeacherServiceReference.LessonView[] GetLessonViewsByTeacher(int teacherId) {

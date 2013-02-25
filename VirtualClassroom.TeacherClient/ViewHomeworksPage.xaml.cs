@@ -27,7 +27,7 @@ namespace VirtualClassroom.TeacherClient
         {
             InitializeComponent();
 
-            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.TeacherId, false);
+            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.TeacherId);
         }
 
         private void btnDownloadHomework_Click(object sender, RoutedEventArgs e)
