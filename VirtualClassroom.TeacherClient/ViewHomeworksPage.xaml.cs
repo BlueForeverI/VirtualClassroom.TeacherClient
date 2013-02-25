@@ -39,7 +39,7 @@ namespace VirtualClassroom.TeacherClient
             saveFileDialog.FileName = homework.Filename;
             if(saveFileDialog.ShowDialog() == true)
             {
-                System.IO.File.WriteAllBytes(saveFileDialog.FileName, homework.Content);
+                System.IO.File.WriteAllText(saveFileDialog.FileName, new UTF8Encoding(true).GetString(homework.Content), new UTF8Encoding(true));
                 MessageBox.Show("Homework downloaded successfully!");
             }
         }

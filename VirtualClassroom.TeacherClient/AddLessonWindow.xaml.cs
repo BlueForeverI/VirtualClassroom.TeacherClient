@@ -79,7 +79,7 @@ namespace VirtualClassroom.TeacherClient
                 lesson.ContentFilename = new FileInfo(txtContentPath.Text).Name;
             }
 
-            if(this.txtContentPath.IsEnabled == false)
+            if(this.txtHomeworkPath.IsEnabled == false)
             {
 
                 lesson.HomeworkContent = this.HomeworkContent;
