@@ -79,15 +79,24 @@ namespace VirtualClassroom.TeacherClient
                 }
                 else
                 {
-                    AddMarkWindow addMarkWindow = new AddMarkWindow();
-                    if (addMarkWindow.ShowDialog() == true)
-                    {
-                        float mark = addMarkWindow.Mark;
-                        int homeworkId = int.Parse((this.dataGridHomeworks.SelectedItem as dynamic).Id.ToString());
-                        client.AddMark(new Mark() { HomeworkId = homeworkId, Value = mark });
-                        this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.TeacherId);
+                    bool hasMark = (this.dataGridHomeworks.SelectedItem as dynamic).HasMark;
 
-                        MessageBox.Show("Mark added successfully!");
+                    if(hasMark)
+                    {
+                        MessageBox.Show("This homework already has a mark!");
+                    }
+                    else
+                    {
+                        AddMarkWindow addMarkWindow = new AddMarkWindow();
+                        if (addMarkWindow.ShowDialog() == true)
+                        {
+                            float mark = addMarkWindow.Mark;
+                            int homeworkId = int.Parse((this.dataGridHomeworks.SelectedItem as dynamic).Id.ToString());
+                            client.AddMark(new Mark() { HomeworkId = homeworkId, Value = mark });
+                            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.TeacherId);
+
+                            MessageBox.Show("Mark added successfully!");
+                        }   
                     }
                 }
             }

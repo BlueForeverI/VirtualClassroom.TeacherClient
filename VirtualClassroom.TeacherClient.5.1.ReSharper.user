@@ -23,20 +23,18 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml.cs" caret="991" fromTop="2" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml.cs" caret="2061" fromTop="40" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="831" fromTop="15" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="926" fromTop="6" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml" caret="331" fromTop="5" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:EditorWindow.xaml" caret="397" fromTop="5" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml" caret="1" fromTop="0" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="421" fromTop="6" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="2698" fromTop="74" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml" caret="744" fromTop="13" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml" caret="723" fromTop="4" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="674" fromTop="3" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="1" fromTop="0" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml" caret="1313" fromTop="10" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3908" fromTop="25" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="1601" fromTop="18" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="1064" fromTop="11" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="1586" fromTop="22" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="1457" fromTop="18" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="2711" fromTop="11" />
@@ -44,13 +42,13 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="831" fromTop="12" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="2283" fromTop="23" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="2283" fromTop="30" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3602" fromTop="29" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3602" fromTop="26" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3967" fromTop="29" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3967" fromTop="26" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1053" fromTop="5" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="2378" fromTop="33" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="2522" fromTop="22" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3697" fromTop="31" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3474" fromTop="21" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="4062" fromTop="31" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3934" fromTop="21" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="2774" fromTop="12" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1305" fromTop="13" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1007" fromTop="6" />
@@ -65,6 +63,8 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml" caret="723" fromTop="4" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="674" fromTop="3" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="301" fromTop="4" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3233" fromTop="15" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3908" fromTop="25" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -83,14 +83,14 @@
       <Item value="TeacherServiceClient`0" priority="1" />
       <Item value="null" priority="3" />
       <Item value="public" priority="9" />
-      <Item value="if" priority="20" />
+      <Item value="if" priority="21" />
       <Item value="clientInstance" priority="4" />
       <Item value="new" priority="22" />
       <Item value="TeacherServiceClient" priority="0" />
       <Item value="return" priority="0" />
       <Item value="private" priority="6" />
       <Item value="int" priority="8" />
-      <Item value="this" priority="57" />
+      <Item value="this" priority="58" />
       <Item value="loginWindow" priority="2" />
       <Item value="App`0" priority="0" />
       <Item value="Resources" priority="2" />
@@ -123,18 +123,18 @@
       <Item value="Lesson" priority="1" />
       <Item value="lesson" priority="15" />
       <Item value="txtName" priority="1" />
-      <Item value="as" priority="2" />
+      <Item value="as" priority="3" />
       <Item value="Subject`0" priority="3" />
       <Item value="txtContentPath" priority="0" />
       <Item value="DateTime`0" priority="2" />
       <Item value="File`0" priority="3" />
       <Item value="txtHomeworkPath" priority="1" />
       <Item value="txtHomeworkDeadline" priority="0" />
-      <Item value="MessageBox`0" priority="13" />
+      <Item value="MessageBox`0" priority="14" />
       <Item value="void" priority="3" />
       <Item value="List`0" priority="1" />
       <Item value="UpdateDataGrid`0" priority="2" />
-      <Item value="dynamic" priority="2" />
+      <Item value="dynamic" priority="3" />
       <Item value="List&lt;Lesson&gt;" priority="0" />
       <Item value="foreach" priority="0" />
       <Item value="in" priority="0" />
@@ -170,8 +170,8 @@
       <Item value="Teacher`0" priority="0" />
       <Item value="Teacher" priority="0" />
       <Item value="teacher" priority="2" />
-      <Item value="bool" priority="0" />
-      <Item value="else" priority="4" />
+      <Item value="bool" priority="1" />
+      <Item value="else" priority="5" />
       <Item value="VirtualClassroom.TeacherClient" priority="0" />
       <Item value="UserControl`0" priority="1" />
       <Item value="Window`0" priority="0" />
@@ -195,6 +195,7 @@
       <Item value="AbandonedMutexException" priority="0" />
       <Item value="Exception`0" priority="3" />
       <Item value="catch" priority="2" />
+      <Item value="hasMark" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.TeacherClient.MainWindow">
       <Item value="TeacherId" priority="0" />
@@ -254,7 +255,7 @@
     <ItemStatistics item="Qualified:System.Windows.Controls.DataGrid">
       <Item value="ItemsSource" priority="1" />
       <Item value="SelectedItems" priority="1" />
-      <Item value="SelectedItem" priority="0" />
+      <Item value="SelectedItem" priority="1" />
       <Item value="Items" priority="0" />
       <Item value="SelectedIndex" priority="0" />
     </ItemStatistics>
@@ -302,7 +303,7 @@
       <Item value="Parse`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.MessageBox">
-      <Item value="Show`0" priority="13" />
+      <Item value="Show`0" priority="14" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="Parse`0" priority="1" />
@@ -324,7 +325,7 @@
       <Item value="LastName" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:VirtualClassroom.TeacherClient.ViewHomeworksPage">
-      <Item value="dataGridHomeworks" priority="3" />
+      <Item value="dataGridHomeworks" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Microsoft.Win32.SaveFileDialog">
       <Item value="FileName" priority="1" />
