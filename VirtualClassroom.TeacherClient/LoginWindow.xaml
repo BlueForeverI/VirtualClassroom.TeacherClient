@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         Title="Login" SizeToContent="WidthAndHeight"
-        Background="{DynamicResource WindowBackgroundBrush}">
+        Background="{DynamicResource WindowBackgroundBrush}" Topmost="True" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <xctk:BusyIndicator x:Name="busyIndicator" IsBusy="False">
             <StackPanel>

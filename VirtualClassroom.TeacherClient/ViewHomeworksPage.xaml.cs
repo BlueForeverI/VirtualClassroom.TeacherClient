@@ -32,27 +32,68 @@ namespace VirtualClassroom.TeacherClient
 
         private void btnDownloadHomework_Click(object sender, RoutedEventArgs e)
         {
-            int homeworkId = int.Parse((this.dataGridHomeworks.SelectedItem as dynamic).Id.ToString());
-            File homework = client.DownloadSubmittedHomework(homeworkId);
-
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-            saveFileDialog.FileName = homework.Filename;
-            if(saveFileDialog.ShowDialog() == true)
+            try
             {
-                System.IO.File.WriteAllText(saveFileDialog.FileName, new UTF8Encoding(true).GetString(homework.Content), new UTF8Encoding(true));
-                MessageBox.Show("Homework downloaded successfully!");
+                if (this.dataGridHomeworks.SelectedIndex < 0)
+                {
+                    MessageBox.Show("You have not selected any homeworks!");
+                }
+                else if (this.dataGridHomeworks.SelectedItems.Count > 1)
+                {
+                    MessageBox.Show("You must select a single homework!");
+                }
+                else
+                {
+                    int homeworkId = int.Parse((this.dataGridHomeworks.SelectedItem as dynamic).Id.ToString());
+                    File homework = client.DownloadSubmittedHomework(homeworkId);
+
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.FileName = homework.Filename;
+                    if (saveFileDialog.ShowDialog() == true)
+                    {
+                        System.IO.File.WriteAllText(saveFileDialog.FileName,
+                                                    new UTF8Encoding(true).GetString(homework.Content),
+                                                    new UTF8Encoding(true));
+
+                        MessageBox.Show("Homework downloaded successfully!");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnAddMatk_Click(object sender, RoutedEventArgs e)
         {
-            AddMarkWindow addMarkWindow = new AddMarkWindow();
-            if(addMarkWindow.ShowDialog() == true)
+            try
             {
-                float mark = addMarkWindow.Mark;
-                int homeworkId = int.Parse((this.dataGridHomeworks.SelectedItem as dynamic).Id.ToString());
-                client.AddMark(new Mark(){HomeworkId = homeworkId, Value = mark});
-                MessageBox.Show("Mark added successfully!");
+                if (this.dataGridHomeworks.SelectedIndex < 0)
+                {
+                    MessageBox.Show("You have not selected any homeworks!");
+                }
+                else if (this.dataGridHomeworks.SelectedItems.Count > 1)
+                {
+                    MessageBox.Show("You must select a single homework!");
+                }
+                else
+                {
+                    AddMarkWindow addMarkWindow = new AddMarkWindow();
+                    if (addMarkWindow.ShowDialog() == true)
+                    {
+                        float mark = addMarkWindow.Mark;
+                        int homeworkId = int.Parse((this.dataGridHomeworks.SelectedItem as dynamic).Id.ToString());
+                        client.AddMark(new Mark() { HomeworkId = homeworkId, Value = mark });
+                        this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.TeacherId);
+
+                        MessageBox.Show("Mark added successfully!");
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

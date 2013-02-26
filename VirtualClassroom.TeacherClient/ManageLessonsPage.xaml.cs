@@ -22,47 +22,61 @@ namespace VirtualClassroom.TeacherClient
     {
         private TeacherServiceClient client = ClientManager.GetClient();
         private int id = MainWindow.TeacherId;
-        private List<Subject> subjects; 
 
         public ManageLessonsPage()
         {
             InitializeComponent();
-            subjects = client.GetSubjectsByTeacher(id).ToList();
-            UpdateDataGrid();
-        }
-
-        void UpdateDataGrid()
-        {
             this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.TeacherId);
         }
 
         private void btnAddLesson_Click(object sender, RoutedEventArgs e)
         {
-            AddLessonWindow addLessonWindow = new AddLessonWindow();
-            if(addLessonWindow.ShowDialog() == true)
+            try
             {
-                client.AddLesson(addLessonWindow.Lesson);
-                MessageBox.Show("Lesson added successfully!");
-                UpdateDataGrid();
+                AddLessonWindow addLessonWindow = new AddLessonWindow();
+                if (addLessonWindow.ShowDialog() == true)
+                {
+                    client.AddLesson(addLessonWindow.Lesson);
+                    MessageBox.Show("Lesson added successfully!");
+                    this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.TeacherId);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void btnRemoveLesson_Click(object sender, RoutedEventArgs e)
         {
-            if(MessageBox.Show("Do you really want to remove these lessons?", "Are you sure?", 
-                MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            try
             {
                 List<Lesson> lessons = new List<Lesson>();
 
                 foreach (dynamic selected in this.dataGridLessons.SelectedItems)
                 {
                     int id = int.Parse(selected.Id.ToString());
-                    lessons.Add(new Lesson(){Id = id});
+                    lessons.Add(new Lesson() {Id = id});
                 }
 
-                client.RemoveLessons(lessons.ToArray());
-                MessageBox.Show("Lessons removed successfully!");
-                UpdateDataGrid();
+                if (lessons.Count == 0)
+                {
+                    MessageBox.Show("You have not selected any lessons!");
+                }
+                else
+                {
+                    if (MessageBox.Show("Do you really want to remove these lessons?", "Are you sure?",
+                                        MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        client.RemoveLessons(lessons.ToArray());
+                        MessageBox.Show("Lessons removed successfully!");
+                        this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.TeacherId);
+                    }
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

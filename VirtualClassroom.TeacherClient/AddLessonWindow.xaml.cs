@@ -25,6 +25,7 @@ namespace VirtualClassroom.TeacherClient
 
         private byte[] LessonContent { get; set; }
         private byte[] HomeworkContent { get; set; }
+        public Lesson Lesson { get; private set; }
 
         public AddLessonWindow()
         {
@@ -34,7 +35,28 @@ namespace VirtualClassroom.TeacherClient
             this.comboSubjects.ItemsSource = subjects;
         }
 
-        public Lesson Lesson { get; private set; }
+        private void ValidateInput()
+        {
+            if(string.IsNullOrEmpty(this.txtName.Text) || string.IsNullOrWhiteSpace(this.txtName.Text))
+            {
+                throw new Exception("The lesson name cannot be an empty string!");
+            }
+
+            if(this.comboSubjects.SelectedIndex < 0)
+            {
+                throw new Exception("You must select a subject!");
+            }
+
+            if(string.IsNullOrEmpty(this.txtContentPath.Text) || string.IsNullOrWhiteSpace(this.txtContentPath.Text))
+            {
+                throw new Exception("You must select content for the lesson");
+            }
+
+            if(this.homeworkDeadlinePicker.Value != null && string.IsNullOrEmpty(this.txtHomeworkPath.Text))
+            {
+                throw new Exception("You must select content for the homework");
+            }
+        }
 
         private void btnBrowseContent_Click(object sender, RoutedEventArgs e)
         {
@@ -42,6 +64,7 @@ namespace VirtualClassroom.TeacherClient
             dialog.Multiselect = false;
             if(dialog.ShowDialog() == true)
             {
+                this.txtContentPath.IsEnabled = true;
                 this.txtContentPath.Text = dialog.FileName;
             }
         }
@@ -52,51 +75,61 @@ namespace VirtualClassroom.TeacherClient
             dialog.Multiselect = false;
             if (dialog.ShowDialog() == true)
             {
+                this.txtHomeworkPath.IsEnabled = true;
                 this.txtHomeworkPath.Text = dialog.FileName;
             }
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-            Lesson lesson = new Lesson();
-            lesson.Name = txtName.Text;
-            lesson.SubjectId = (this.comboSubjects.SelectedItem as Subject).Id;
-
-            lesson.Date = (DateTime)this.datePicker.Value;
-            lesson.HomeworkDeadline = this.homeworkDeadlinePicker.Value;
-
-            if(this.txtContentPath.IsEnabled == false)
+            try
             {
-                lesson.Content = this.LessonContent;
-                lesson.ContentFilename = string.Format("{0}.{1}.{2}.html",
-                                                       (this.comboSubjects.SelectedItem as Subject).Name,
-                                                       lesson.Name, lesson.Date.ToShortDateString());
+                ValidateInput();
+
+                Lesson lesson = new Lesson();
+                lesson.Name = txtName.Text;
+                lesson.SubjectId = (this.comboSubjects.SelectedItem as Subject).Id;
+
+                lesson.HomeworkDeadline = this.homeworkDeadlinePicker.Value;
+
+                if (this.txtContentPath.IsEnabled == false)
+                {
+                    lesson.Content = this.LessonContent;
+                    lesson.ContentFilename = string.Format("{0}.{1}.{2}.html",
+                                                           (this.comboSubjects.SelectedItem as Subject).Name,
+                                                           lesson.Name, lesson.Date.ToShortDateString());
+                }
+                else
+                {
+
+                    lesson.Content = System.IO.File.ReadAllBytes(this.txtContentPath.Text);
+                    lesson.ContentFilename = new FileInfo(txtContentPath.Text).Name;
+                }
+
+                if (this.txtHomeworkPath.IsEnabled == false)
+                {
+
+                    lesson.HomeworkContent = this.HomeworkContent;
+                    lesson.HomeworkFilename = string.Format("Homework-{0}.{1}.{2}.html",
+                                                           (this.comboSubjects.SelectedItem as Subject).Name,
+                                                           lesson.Name, lesson.Date.ToShortDateString());
+                }
+                else
+                {
+
+                    lesson.HomeworkContent = System.IO.File.ReadAllBytes(txtHomeworkPath.Text);
+                    lesson.HomeworkFilename = new FileInfo(txtHomeworkPath.Text).Name;
+                }
+
+                this.Lesson = lesson;
+                this.DialogResult = true;
+                this.Close();
             }
-            else
+            catch (Exception ex)
             {
-
-                lesson.Content = System.IO.File.ReadAllBytes(this.txtContentPath.Text);
-                lesson.ContentFilename = new FileInfo(txtContentPath.Text).Name;
+                MessageBox.Show(ex.Message, "Invalid input");
             }
-
-            if(this.txtHomeworkPath.IsEnabled == false)
-            {
-
-                lesson.HomeworkContent = this.HomeworkContent;
-                lesson.HomeworkFilename = string.Format("Homework-{0}.{1}.{2}.html",
-                                                       (this.comboSubjects.SelectedItem as Subject).Name,
-                                                       lesson.Name, lesson.Date.ToShortDateString());
-            }
-            else
-            {
-
-                lesson.HomeworkContent = System.IO.File.ReadAllBytes(txtHomeworkPath.Text);
-                lesson.HomeworkFilename = new FileInfo(txtHomeworkPath.Text).Name;
-            }
-
-            this.Lesson = lesson;
-            this.DialogResult = true;
-            this.Close();
+            
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

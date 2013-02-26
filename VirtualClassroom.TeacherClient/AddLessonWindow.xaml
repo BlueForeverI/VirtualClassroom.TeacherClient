@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         Title="Add Lesson" SizeToContent="WidthAndHeight"
-        Background="{DynamicResource WindowBackgroundBrush}">
+        Background="{DynamicResource WindowBackgroundBrush}" ShowInTaskbar="False" 
+        ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Topmost="True">
     <Grid>
         <StackPanel>
             <WrapPanel Margin="10">
@@ -25,10 +26,6 @@
                 <TextBox x:Name="txtContentPath" Width="150" Margin="10 0 0 0"/>
                 <Button x:Name="btnBrowseContent" Click="btnBrowseContent_Click" Margin="10 0 0 0" >Browse</Button>
                 <Button x:Name="btnOpenEditorContent" Click="btnOpenEditorContent_Click" Margin="10 0 0 0">Open Editor</Button>
-            </WrapPanel>
-            <WrapPanel Margin="10">
-                <Label>Date: </Label>
-                <xctk:DateTimePicker x:Name="datePicker" IsOpen="False" Margin="10 0 0 0" Width="200"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>Homework File: </Label>
