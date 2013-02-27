@@ -26,7 +26,7 @@ namespace VirtualClassroom.TeacherClient
         {
             InitializeComponent();
 
-            this.dataGridMarks.ItemsSource = client.GetMarkViewsByTeacher(MainWindow.TeacherId);
+            this.dataGridMarks.ItemsSource = client.GetMarkViewsByTeacher(MainWindow.Teacher.Id);
         }
     }
 }

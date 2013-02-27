@@ -21,6 +21,8 @@
                 </DataGrid>
                 <StackPanel>
                     <Button x:Name="btnAddLesson" Click="btnAddLesson_Click" Padding="5">Add Lesson</Button>
+                    <Button x:Name="btnDownloadLesson" Click="btnDownloadLesson_Click" Padding="5">Download Lesson</Button>
+                    <Button x:Name="btnDownloadHomework" Click="btnDownloadHomework_Click" Padding="5">Download Homework</Button>
                     <Button x:Name="btnRemoveLesson" Click="btnRemoveLesson_Click" Padding="5">Remove Lessons</Button>
                 </StackPanel>
             </StackPanel>

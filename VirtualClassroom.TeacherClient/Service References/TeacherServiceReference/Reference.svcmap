@@ -18,7 +18,7 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://virtualclassroomservices.apphb.com/Services/TeacherService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
     <MetadataFile FileName="TeacherService.xsd" MetadataType="Schema" ID="701ad8af-4cc3-4825-aa36-b3ad3ba3fc0b" SourceId="1" SourceUrl="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd2" />

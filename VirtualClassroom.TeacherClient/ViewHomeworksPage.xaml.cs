@@ -27,7 +27,7 @@ namespace VirtualClassroom.TeacherClient
         {
             InitializeComponent();
 
-            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.TeacherId);
+            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.Teacher.Id);
         }
 
         private void btnDownloadHomework_Click(object sender, RoutedEventArgs e)
@@ -93,7 +93,7 @@ namespace VirtualClassroom.TeacherClient
                             float mark = addMarkWindow.Mark;
                             int homeworkId = int.Parse((this.dataGridHomeworks.SelectedItem as dynamic).Id.ToString());
                             client.AddMark(new Mark() { HomeworkId = homeworkId, Value = mark });
-                            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.TeacherId);
+                            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.Teacher.Id);
 
                             MessageBox.Show("Mark added successfully!");
                         }   

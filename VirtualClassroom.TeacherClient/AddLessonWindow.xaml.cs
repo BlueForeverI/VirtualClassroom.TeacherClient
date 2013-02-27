@@ -31,7 +31,7 @@ namespace VirtualClassroom.TeacherClient
         {
             InitializeComponent();
 
-            var subjects = client.GetSubjectsByTeacher(MainWindow.TeacherId).ToList();
+            var subjects = client.GetSubjectsByTeacher(MainWindow.Teacher.Id).ToList();
             this.comboSubjects.ItemsSource = subjects;
         }
 
@@ -116,9 +116,11 @@ namespace VirtualClassroom.TeacherClient
                 }
                 else
                 {
-
-                    lesson.HomeworkContent = System.IO.File.ReadAllBytes(txtHomeworkPath.Text);
-                    lesson.HomeworkFilename = new FileInfo(txtHomeworkPath.Text).Name;
+                    if (lesson.HomeworkDeadline != null)
+                    {
+                        lesson.HomeworkContent = System.IO.File.ReadAllBytes(txtHomeworkPath.Text);
+                        lesson.HomeworkFilename = new FileInfo(txtHomeworkPath.Text).Name;
+                    }
                 }
 
                 this.Lesson = lesson;
