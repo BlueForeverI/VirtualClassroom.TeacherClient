@@ -98,21 +98,21 @@ namespace VirtualClassroom.TeacherClient
                 else
                 {
                     int lessonId = int.Parse((this.dataGridLessons.SelectedItem as dynamic).Id.ToString());
-                    File lessson = client.DownloadLessonContent(lessonId);
+                    File lesson = client.DownloadLessonContent(lessonId);
 
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
                     saveFileDialog.FileName = lessson.Filename;
                     if (saveFileDialog.ShowDialog() == true)
                     {
-                        if (lessson.Filename.EndsWith(".html"))
+                        if (lesson.Filename.EndsWith(".html"))
                         {
                             System.IO.File.WriteAllText(saveFileDialog.FileName,
-                                                        Encoding.UTF8.GetString(lessson.Content),
+                                                        Encoding.UTF8.GetString(lesson.Content),
                                                         Encoding.UTF8);
                         }
                         else
                         {
-                            System.IO.File.WriteAllBytes(saveFileDialog.FileName, lessson.Content);
+                            System.IO.File.WriteAllBytes(saveFileDialog.FileName, lesson.Content);
                         }
 
                         MessageBox.Show("Lesson content downloaded successfully!");
