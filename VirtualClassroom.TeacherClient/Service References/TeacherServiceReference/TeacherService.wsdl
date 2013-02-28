@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="TeacherService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ITeacherService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="600000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
@@ -74,157 +85,161 @@
   <wsdl:message name="ITeacherService_DownloadSubmittedHomework_OutputMessage">
     <wsdl:part name="parameters" element="tns:DownloadSubmittedHomeworkResponse" />
   </wsdl:message>
-  <wsdl:portType name="ITeacherService">
-    <wsdl:operation name="LoginTeacher">
+  <wsdl:portType msc:usingSession="true" name="ITeacherService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="LoginTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/LoginTeacher" message="tns:ITeacherService_LoginTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/LoginTeacherResponse" message="tns:ITeacherService_LoginTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddLesson">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddLesson">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/AddLesson" message="tns:ITeacherService_AddLesson_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/AddLessonResponse" message="tns:ITeacherService_AddLesson_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="RemoveLessons">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveLessons">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/RemoveLessons" message="tns:ITeacherService_RemoveLessons_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/RemoveLessonsResponse" message="tns:ITeacherService_RemoveLessons_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetHomeworkViewsByTeacher">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetHomeworkViewsByTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacher" message="tns:ITeacherService_GetHomeworkViewsByTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacherResponse" message="tns:ITeacherService_GetHomeworkViewsByTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetLessonViewsByTeacher">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetLessonViewsByTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetLessonViewsByTeacher" message="tns:ITeacherService_GetLessonViewsByTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetLessonViewsByTeacherResponse" message="tns:ITeacherService_GetLessonViewsByTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetSubjectsByTeacher">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetSubjectsByTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacher" message="tns:ITeacherService_GetSubjectsByTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetSubjectsByTeacherResponse" message="tns:ITeacherService_GetSubjectsByTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetMarkViewsByTeacher">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetMarkViewsByTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetMarkViewsByTeacher" message="tns:ITeacherService_GetMarkViewsByTeacher_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetMarkViewsByTeacherResponse" message="tns:ITeacherService_GetMarkViewsByTeacher_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="AddMark">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddMark">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/AddMark" message="tns:ITeacherService_AddMark_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/AddMarkResponse" message="tns:ITeacherService_AddMark_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DownloadLessonContent">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DownloadLessonContent">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/DownloadLessonContent" message="tns:ITeacherService_DownloadLessonContent_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/DownloadLessonContentResponse" message="tns:ITeacherService_DownloadLessonContent_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DownloadLessonHomework">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DownloadLessonHomework">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/DownloadLessonHomework" message="tns:ITeacherService_DownloadLessonHomework_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/DownloadLessonHomeworkResponse" message="tns:ITeacherService_DownloadLessonHomework_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DownloadSubmittedHomework">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DownloadSubmittedHomework">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/DownloadSubmittedHomework" message="tns:ITeacherService_DownloadSubmittedHomework_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/DownloadSubmittedHomeworkResponse" message="tns:ITeacherService_DownloadSubmittedHomework_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
-  <wsdl:binding name="BasicHttpBinding_ITeacherService" type="tns:ITeacherService">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+  <wsdl:binding name="WSHttpBinding_ITeacherService" type="tns:ITeacherService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ITeacherService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="LoginTeacher">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/LoginTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/LoginTeacher" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddLesson">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/AddLesson" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/AddLesson" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="RemoveLessons">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/RemoveLessons" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/RemoveLessons" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetHomeworkViewsByTeacher">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/GetHomeworkViewsByTeacher" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetLessonViewsByTeacher">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetLessonViewsByTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/GetLessonViewsByTeacher" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetSubjectsByTeacher">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetSubjectsByTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/GetSubjectsByTeacher" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="GetMarkViewsByTeacher">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/GetMarkViewsByTeacher" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/GetMarkViewsByTeacher" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="AddMark">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/AddMark" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/AddMark" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DownloadLessonContent">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/DownloadLessonContent" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/DownloadLessonContent" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DownloadLessonHomework">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/DownloadLessonHomework" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/DownloadLessonHomework" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="DownloadSubmittedHomework">
-      <soap:operation soapAction="http://tempuri.org/ITeacherService/DownloadSubmittedHomework" style="document" />
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/DownloadSubmittedHomework" style="document" />
       <wsdl:input>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:input>
       <wsdl:output>
-        <soap:body use="literal" />
+        <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="TeacherService">
-    <wsdl:port name="BasicHttpBinding_ITeacherService" binding="tns:BasicHttpBinding_ITeacherService">
-      <soap:address location="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc" />
+    <wsdl:port name="WSHttpBinding_ITeacherService" binding="tns:WSHttpBinding_ITeacherService">
+      <soap12:address location="http://virtualclassroomservices.apphb.com/Services/TeacherService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://virtualclassroomservices.apphb.com/Services/TeacherService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VirtualClassroom.Services.Services;
 using VirtualClassroom.TeacherClient.TeacherServiceReference;
 
 namespace VirtualClassroom.TeacherClient
@@ -41,7 +42,9 @@ namespace VirtualClassroom.TeacherClient
 
             worker.DoWork += (o, ea) =>
             {
-                teacher = client.LoginTeacher(username, password);
+                string secret = Crypto.GenerateRandomSecret(30);
+                teacher = client.LoginTeacher(Crypto.EncryptStringAES(username, secret),
+                    Crypto.EncryptStringAES(password, secret), secret);
             };
 
             worker.RunWorkerCompleted += (o, ea) =>

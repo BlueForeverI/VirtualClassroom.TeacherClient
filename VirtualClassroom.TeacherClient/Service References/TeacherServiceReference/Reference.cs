@@ -1453,11 +1453,11 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TeacherServiceReference.ITeacherService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TeacherServiceReference.ITeacherService", SessionMode=System.ServiceModel.SessionMode.Required)]
     public interface ITeacherService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/LoginTeacher", ReplyAction="http://tempuri.org/ITeacherService/LoginTeacherResponse")]
-        VirtualClassroom.TeacherClient.TeacherServiceReference.Teacher LoginTeacher(string username, string password);
+        VirtualClassroom.TeacherClient.TeacherServiceReference.Teacher LoginTeacher(string usernameCrypt, string passwordCrypt, string secret);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/AddLesson", ReplyAction="http://tempuri.org/ITeacherService/AddLessonResponse")]
         void AddLesson(VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson lesson);
@@ -1517,8 +1517,8 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public VirtualClassroom.TeacherClient.TeacherServiceReference.Teacher LoginTeacher(string username, string password) {
-            return base.Channel.LoginTeacher(username, password);
+        public VirtualClassroom.TeacherClient.TeacherServiceReference.Teacher LoginTeacher(string usernameCrypt, string passwordCrypt, string secret) {
+            return base.Channel.LoginTeacher(usernameCrypt, passwordCrypt, secret);
         }
         
         public void AddLesson(VirtualClassroom.TeacherClient.TeacherServiceReference.Lesson lesson) {
