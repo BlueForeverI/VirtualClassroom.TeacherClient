@@ -101,7 +101,7 @@ namespace VirtualClassroom.TeacherClient
                     File lesson = client.DownloadLessonContent(lessonId);
 
                     SaveFileDialog saveFileDialog = new SaveFileDialog();
-                    saveFileDialog.FileName = lessson.Filename;
+                    saveFileDialog.FileName = lesson.Filename;
                     if (saveFileDialog.ShowDialog() == true)
                     {
                         if (lesson.Filename.EndsWith(".html"))
