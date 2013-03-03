@@ -1,21 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Controls.Primitives;
-using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System.IO.Packaging;
-using System.Xml;
-using System.Xml.Linq;
 
 namespace VirtualClassroom.TeacherClient
 {
@@ -33,7 +22,8 @@ namespace VirtualClassroom.TeacherClient
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
-            this.comboFontFamily.ItemsSource = System.Windows.Media.Fonts.SystemFontFamilies;
+            //load fonts
+            this.comboFontFamily.ItemsSource = Fonts.SystemFontFamilies;
             this.comboFontSize.ItemsSource = new double[] 
             { 
                 3.0, 4.0, 5.0, 6.0, 6.5, 7.0, 7.5, 8.0, 8.5, 9.0, 9.5, 
@@ -74,17 +64,17 @@ namespace VirtualClassroom.TeacherClient
             Paragraph startParagraph = rtbDocument.Selection.Start.Paragraph;
             Paragraph endParagraph = rtbDocument.Selection.End.Paragraph;
 
-            if(startParagraph != null && endParagraph != null 
-                && (startParagraph.Parent is ListItem) 
-                && (endParagraph.Parent is ListItem) 
+            if (startParagraph != null && endParagraph != null
+                && (startParagraph.Parent is ListItem)
+                && (endParagraph.Parent is ListItem)
                 && object.ReferenceEquals(((ListItem)startParagraph.Parent).List, ((ListItem)endParagraph.Parent).List))
             {
-                TextMarkerStyle markerStyle = ((ListItem) startParagraph.Parent).List.MarkerStyle;
-                if(markerStyle == TextMarkerStyle.Disc)
+                TextMarkerStyle markerStyle = ((ListItem)startParagraph.Parent).List.MarkerStyle;
+                if (markerStyle == TextMarkerStyle.Disc)
                 {
                     btnBullets.IsChecked = true;
                 }
-                else if(markerStyle == TextMarkerStyle.Decimal)
+                else if (markerStyle == TextMarkerStyle.Decimal)
                 {
                     btnNumbering.IsChecked = true;
                 }
@@ -98,7 +88,7 @@ namespace VirtualClassroom.TeacherClient
 
         private void comboFontFamily_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            FontFamily fontFamily = (FontFamily) e.AddedItems[0];
+            FontFamily fontFamily = (FontFamily)e.AddedItems[0];
             ApplyPropertyToText(TextElement.FontFamilyProperty, fontFamily);
         }
 
@@ -109,7 +99,7 @@ namespace VirtualClassroom.TeacherClient
 
         private void ApplyPropertyToText(DependencyProperty property, object value)
         {
-            if(value == null)
+            if (value == null)
             {
                 return;
             }
@@ -120,8 +110,8 @@ namespace VirtualClassroom.TeacherClient
         private void UpdateSelectedFontFamily()
         {
             object value = rtbDocument.Selection.GetPropertyValue(TextElement.FontFamilyProperty);
-            FontFamily currentFontFamily = (FontFamily) ((value == DependencyProperty.UnsetValue) ? null : value);
-            if(currentFontFamily != null)
+            FontFamily currentFontFamily = (FontFamily)((value == DependencyProperty.UnsetValue) ? null : value);
+            if (currentFontFamily != null)
             {
                 comboFontFamily.SelectedItem = currentFontFamily;
             }
@@ -141,29 +131,18 @@ namespace VirtualClassroom.TeacherClient
         private void UpdateForegroundColor()
         {
             object value = rtbDocument.Selection.GetPropertyValue(TextElement.ForegroundProperty);
-            SolidColorBrush colorBrush = (SolidColorBrush) ((value == DependencyProperty.UnsetValue) ? null : value);
-            if(colorBrush != null)
+            SolidColorBrush colorBrush = (SolidColorBrush)((value == DependencyProperty.UnsetValue) ? null : value);
+            if (colorBrush != null)
             {
                 colorPicker.SelectedColor = colorBrush.Color;
             }
-        }
-
-        private Color ConvertRgbToColor(string rgbColor)
-        {
-            string rgbValue = rgbColor;
-
-            int redValue = Convert.ToInt32(rgbValue.Substring(0, 2), 16);
-            int greenValue = Convert.ToInt32(rgbValue.Substring(2, 2), 16);
-            int blueValue = Convert.ToInt32(rgbValue.Substring(4, 2), 16);
-
-            return Color.FromRgb((byte)redValue, (byte)greenValue, (byte)blueValue);
         }
 
         private void btnSubscript_Click(object sender, RoutedEventArgs e)
         {
             var currentAlignment = rtbDocument.Selection.GetPropertyValue(Inline.BaselineAlignmentProperty);
 
-            BaselineAlignment newAlignment = ((BaselineAlignment) currentAlignment == BaselineAlignment.Subscript)
+            BaselineAlignment newAlignment = ((BaselineAlignment)currentAlignment == BaselineAlignment.Subscript)
                                                  ? BaselineAlignment.Baseline
                                                  : BaselineAlignment.Subscript;
             rtbDocument.Selection.ApplyPropertyValue(Inline.BaselineAlignmentProperty, newAlignment);
@@ -190,10 +169,15 @@ namespace VirtualClassroom.TeacherClient
             var currentIndent = rtbDocument.Selection.GetPropertyValue(Paragraph.TextIndentProperty);
             if ((double)currentIndent != 0)
             {
-                rtbDocument.Selection.ApplyPropertyValue(Paragraph.TextIndentProperty, (double) currentIndent - INDENT_SIZE);
+                rtbDocument.Selection.ApplyPropertyValue(Paragraph.TextIndentProperty, (double)currentIndent - INDENT_SIZE);
             }
         }
 
+        /// <summary>
+        /// Normalize generated HTML
+        /// </summary>
+        /// <param name="nativeTags">The raw HTML code</param>
+        /// <returns>Formatted lowercase HTML tags</returns>
         public static string FormatHtml(string nativeTags)
         {
             string upperTags = nativeTags;
