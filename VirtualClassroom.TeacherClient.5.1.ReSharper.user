@@ -17,54 +17,54 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:App.xaml" caret="378" fromTop="8" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:Theme.xaml" caret="118627" fromTop="12" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:DocumentEditor.xaml" caret="6925" fromTop="5" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml.cs" caret="1221" fromTop="0" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml" caret="331" fromTop="5" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:EditorWindow.xaml" caret="397" fromTop="5" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="421" fromTop="6" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="674" fromTop="3" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml" caret="1313" fromTop="10" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="428" fromTop="6" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml.cs" caret="795" fromTop="10" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1421" fromTop="19" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml" caret="1472" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml.cs" caret="562" fromTop="8" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="3535" fromTop="21" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml" caret="943" fromTop="4" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="3603" fromTop="13" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:app.config" caret="738" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml.cs" caret="1923" fromTop="57" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml.cs" caret="1799" fromTop="50" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml.cs" caret="559" fromTop="13" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="982" fromTop="6" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml" caret="1758" fromTop="10" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="1202" fromTop="12" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="400" fromTop="8" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml.cs" caret="1022" fromTop="34" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="2558" fromTop="8" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="6280" fromTop="166" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml" caret="879" fromTop="5" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml.cs" caret="1208" fromTop="6" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:EditorWindow.xaml" caret="703" fromTop="2" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml" caret="496" fromTop="8" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml" caret="1448" fromTop="8" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1362" fromTop="6" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="2828" fromTop="21" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="912" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="3803" fromTop="14" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml.cs" caret="868" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml" caret="1641" fromTop="12" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="4757" fromTop="39" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="3176" fromTop="11" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="3286" fromTop="13" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="3470" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="4562" fromTop="20" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="6739" fromTop="33" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="4937" fromTop="5" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="5047" fromTop="7" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="5686" fromTop="25" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="1051" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="5354" fromTop="13" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="6483" fromTop="28" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="4710" fromTop="19" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="4503" fromTop="23" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="6446" fromTop="20" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="6268" fromTop="25" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml" caret="738" fromTop="0" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml" caret="943" fromTop="4" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:app.config" caret="738" fromTop="4" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:app.config" caret="738" fromTop="9" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="3847" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ManageLessonsPage.xaml.cs" caret="4370" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:app.config" caret="673" fromTop="18" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:app.config" caret="311" fromTop="8" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:LoginWindow.xaml.cs" caret="1518" fromTop="10" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="803" fromTop="20" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1066" fromTop="27" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="434" fromTop="3" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml" caret="1218" fromTop="13" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml.cs" caret="1037" fromTop="28" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewMarksPage.xaml.cs" caret="1022" fromTop="28" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="300" fromTop="4" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="600" fromTop="10" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="780" fromTop="5" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="2151" fromTop="3" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml" caret="2558" fromTop="8" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="1221" fromTop="23" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="943" fromTop="16" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="1206" fromTop="23" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="1486" fromTop="23" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="1640" fromTop="22" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="1986" fromTop="19" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="1742" fromTop="14" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="5148" fromTop="19" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="5760" fromTop="14" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddLessonWindow.xaml.cs" caret="6280" fromTop="28" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml" caret="236" fromTop="3" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml" caret="539" fromTop="6" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml" caret="879" fromTop="5" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml.cs" caret="884" fromTop="11" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml.cs" caret="1058" fromTop="17" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:AddMarkWindow.xaml.cs" caret="1205" fromTop="22" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:EditorWindow.xaml" caret="293" fromTop="3" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:EditorWindow.xaml" caret="704" fromTop="2" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:ViewHomeworksPage.xaml.cs" caret="1362" fromTop="21" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -130,7 +130,7 @@
       <Item value="File`0" priority="5" />
       <Item value="txtHomeworkPath" priority="1" />
       <Item value="txtHomeworkDeadline" priority="0" />
-      <Item value="MessageBox`0" priority="15" />
+      <Item value="MessageBox`0" priority="19" />
       <Item value="void" priority="3" />
       <Item value="List`0" priority="1" />
       <Item value="UpdateDataGrid`0" priority="2" />
@@ -187,8 +187,8 @@
       <Item value="formattedHtml" priority="0" />
       <Item value="DialogResult" priority="0" />
       <Item value="Length" priority="1" />
-      <Item value="try" priority="3" />
-      <Item value="ex" priority="6" />
+      <Item value="try" priority="7" />
+      <Item value="ex" priority="10" />
       <Item value="ValidateInput`0" priority="1" />
       <Item value="throw" priority="6" />
       <Item value="Exception" priority="5" />
@@ -317,7 +317,7 @@
       <Item value="Parse`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.MessageBox">
-      <Item value="Show`0" priority="15" />
+      <Item value="Show`0" priority="19" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Int32">
       <Item value="Parse`0" priority="1" />
@@ -408,7 +408,7 @@
       <Item value="ToShortDateString`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Exception">
-      <Item value="Message" priority="6" />
+      <Item value="Message" priority="10" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.IList">
       <Item value="Count" priority="0" />

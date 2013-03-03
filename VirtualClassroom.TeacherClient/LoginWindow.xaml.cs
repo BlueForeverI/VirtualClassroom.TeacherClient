@@ -52,7 +52,7 @@ namespace VirtualClassroom.TeacherClient
                 this.busyIndicator.IsBusy = false;
                 if (teacher == null)
                 {
-                    MessageBox.Show("Wrong username or password!", "Invalid login",
+                    MessageBox.Show("Грешно потребителско име или парола", "Грешка",
                                     MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else

@@ -28,8 +28,15 @@ namespace VirtualClassroom.TeacherClient
 
         public ManageLessonsPage()
         {
-            InitializeComponent();
-            this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
+            try
+            {
+                InitializeComponent();
+                this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAddLesson_Click(object sender, RoutedEventArgs e)
@@ -40,7 +47,7 @@ namespace VirtualClassroom.TeacherClient
                 if (addLessonWindow.ShowDialog() == true)
                 {
                     client.AddLesson(addLessonWindow.Lesson);
-                    MessageBox.Show("Lesson added successfully!");
+                    MessageBox.Show("Урокът беше добавен успешно");
                     this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
                 }
             }
@@ -64,15 +71,15 @@ namespace VirtualClassroom.TeacherClient
 
                 if (lessons.Count == 0)
                 {
-                    MessageBox.Show("You have not selected any lessons!");
+                    MessageBox.Show("Не сте избрали уроци");
                 }
                 else
                 {
-                    if (MessageBox.Show("Do you really want to remove these lessons?", "Are you sure?",
+                    if (MessageBox.Show("Наистина ли искате да премахнете избраните уроци?", "Сигурен ли сте?",
                                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveLessons(lessons.ToArray());
-                        MessageBox.Show("Lessons removed successfully!");
+                        MessageBox.Show("Уроците бяха премахнати успешно");
                         this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
                     }
                 }
@@ -89,11 +96,11 @@ namespace VirtualClassroom.TeacherClient
             {
                 if (this.dataGridLessons.SelectedIndex < 0)
                 {
-                    MessageBox.Show("You have not selected any lessons!");
+                    MessageBox.Show("Не сте избрали уроци");
                 }
                 else if (this.dataGridLessons.SelectedItems.Count > 1)
                 {
-                    MessageBox.Show("You must select a single lesson!");
+                    MessageBox.Show("Трябва да изберете точно един урок");
                 }
                 else
                 {
@@ -115,7 +122,7 @@ namespace VirtualClassroom.TeacherClient
                             System.IO.File.WriteAllBytes(saveFileDialog.FileName, lesson.Content);
                         }
 
-                        MessageBox.Show("Lesson content downloaded successfully!");
+                        MessageBox.Show("Урокът беше изтеглен успешно");
                     }
                 }
             }
@@ -131,15 +138,15 @@ namespace VirtualClassroom.TeacherClient
             {
                 if (this.dataGridLessons.SelectedIndex < 0)
                 {
-                    MessageBox.Show("You have not selected any lessons!");
+                    MessageBox.Show("Не сте избрали уроци");
                 }
                 else if (this.dataGridLessons.SelectedItems.Count > 1)
                 {
-                    MessageBox.Show("You must select a single lesson!");
+                    MessageBox.Show("Трябва да изберете точно един урок");
                 }
                 else if((this.dataGridLessons.SelectedItem as LessonView).HomeworkDeadline == null)
                 {
-                    MessageBox.Show("The lesson doesn't have homework!");
+                    MessageBox.Show("Този урок няма домашно");
                 }
                 else
                 {
@@ -161,7 +168,7 @@ namespace VirtualClassroom.TeacherClient
                             System.IO.File.WriteAllBytes(saveFileDialog.FileName, homework.Content);
                         }
 
-                        MessageBox.Show("Homework content downloaded successfully!");
+                        MessageBox.Show("Домашното беше изтеглено успешно");
                     }
                 }
             }

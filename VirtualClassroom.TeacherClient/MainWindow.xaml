@@ -1,16 +1,16 @@
 ﻿<Window x:Class="VirtualClassroom.TeacherClient.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Teacher Client"
+        Title="Учител - Виртуална класна стая"
         SizeToContent="WidthAndHeight" MinHeight="350" MinWidth="600"
         Background="{DynamicResource WindowBackgroundBrush}"
         Closing="Window_Closing" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
             <WrapPanel x:Name="navigation" VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="0 10 0 20">
-                <Button x:Name="btnManageLessons" Click="btnManageLessons_Click" Padding="20" >Manage Lessons</Button>
-                <Button x:Name="btnViewHomeworks" Click="btnViewHomeworks_Click" Padding="20">View Homeworks</Button>
-                <Button x:Name="btnViewMarks" Click="btnViewMarks_Click" Padding="20">View Marks</Button>
+                <Button x:Name="btnManageLessons" Click="btnManageLessons_Click" Padding="20" >Уроци</Button>
+                <Button x:Name="btnViewHomeworks" Click="btnViewHomeworks_Click" Padding="20">Домашни</Button>
+                <Button x:Name="btnViewMarks" Click="btnViewMarks_Click" Padding="20">Оценки</Button>
             </WrapPanel>
            
             <StackPanel>

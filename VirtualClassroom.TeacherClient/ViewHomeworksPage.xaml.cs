@@ -25,9 +25,16 @@ namespace VirtualClassroom.TeacherClient
 
         public ViewHomeworksPage()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.Teacher.Id);
+                this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.Teacher.Id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnDownloadHomework_Click(object sender, RoutedEventArgs e)
@@ -36,11 +43,11 @@ namespace VirtualClassroom.TeacherClient
             {
                 if (this.dataGridHomeworks.SelectedIndex < 0)
                 {
-                    MessageBox.Show("You have not selected any homeworks!");
+                    MessageBox.Show("Не сте избрали домашно");
                 }
                 else if (this.dataGridHomeworks.SelectedItems.Count > 1)
                 {
-                    MessageBox.Show("You must select a single homework!");
+                    MessageBox.Show("Трябва да изберете точно едно домашно");
                 }
                 else
                 {
@@ -55,7 +62,7 @@ namespace VirtualClassroom.TeacherClient
                                                     new UTF8Encoding(true).GetString(homework.Content),
                                                     new UTF8Encoding(true));
 
-                        MessageBox.Show("Homework downloaded successfully!");
+                        MessageBox.Show("Домашното беше изпратено успешно");
                     }
                 }
             }
@@ -65,17 +72,17 @@ namespace VirtualClassroom.TeacherClient
             }
         }
 
-        private void btnAddMatk_Click(object sender, RoutedEventArgs e)
+        private void btnAddMark_Click(object sender, RoutedEventArgs e)
         {
             try
             {
                 if (this.dataGridHomeworks.SelectedIndex < 0)
                 {
-                    MessageBox.Show("You have not selected any homeworks!");
+                    MessageBox.Show("Не сте избрали домашно");
                 }
                 else if (this.dataGridHomeworks.SelectedItems.Count > 1)
                 {
-                    MessageBox.Show("You must select a single homework!");
+                    MessageBox.Show("Трябва да изберете точно едно домашно");
                 }
                 else
                 {
@@ -83,7 +90,7 @@ namespace VirtualClassroom.TeacherClient
 
                     if(hasMark)
                     {
-                        MessageBox.Show("This homework already has a mark!");
+                        MessageBox.Show("Това домашно вече има оценка");
                     }
                     else
                     {
@@ -95,7 +102,7 @@ namespace VirtualClassroom.TeacherClient
                             client.AddMark(new Mark() { HomeworkId = homeworkId, Value = mark });
                             this.dataGridHomeworks.ItemsSource = client.GetHomeworkViewsByTeacher(MainWindow.Teacher.Id);
 
-                            MessageBox.Show("Mark added successfully!");
+                            MessageBox.Show("Оценката беше добавена успешно");
                         }   
                     }
                 }

@@ -26,20 +26,21 @@ namespace VirtualClassroom.TeacherClient
 
         private void ValidateInput()
         {
-            if(string.IsNullOrEmpty(this.txtMark.Text) || string.IsNullOrWhiteSpace(this.txtMark.Text))
+            if(string.IsNullOrEmpty(this.txtMark.Text) 
+                || string.IsNullOrWhiteSpace(this.txtMark.Text))
             {
-                throw new Exception("The mark cannot be an empty string");
+                throw new Exception("Не сте въвели оценка");
             }
 
             float mark;
             if(!float.TryParse(this.txtMark.Text, out mark))
             {
-                throw new Exception("The mark is not in a correct format!");
+                throw new Exception("Невалидна оценка");
             }
 
             if(mark < 2 || mark > 6)
             {
-                throw new Exception("The mark must be between 2 and 6");
+                throw new Exception("Оценката трябва да е между 2 и 6");
             }
         }
 

@@ -29,32 +29,41 @@ namespace VirtualClassroom.TeacherClient
 
         public AddLessonWindow()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
 
-            var subjects = client.GetSubjectsByTeacher(MainWindow.Teacher.Id).ToList();
-            this.comboSubjects.ItemsSource = subjects;
+                this.comboSubjects.ItemsSource = client.GetSubjectsByTeacher(MainWindow.Teacher.Id).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ValidateInput()
         {
-            if(string.IsNullOrEmpty(this.txtName.Text) || string.IsNullOrWhiteSpace(this.txtName.Text))
+            if(string.IsNullOrEmpty(this.txtName.Text) 
+                || string.IsNullOrWhiteSpace(this.txtName.Text))
             {
-                throw new Exception("The lesson name cannot be an empty string!");
+                throw new Exception("Не сте въвели име на урока");
             }
 
             if(this.comboSubjects.SelectedIndex < 0)
             {
-                throw new Exception("You must select a subject!");
+                throw new Exception("Трябва да изберете предмет");
             }
 
-            if(string.IsNullOrEmpty(this.txtContentPath.Text) || string.IsNullOrWhiteSpace(this.txtContentPath.Text))
+            if(string.IsNullOrEmpty(this.txtContentPath.Text) 
+                || string.IsNullOrWhiteSpace(this.txtContentPath.Text))
             {
-                throw new Exception("You must select content for the lesson");
+                throw new Exception("Трябва да изберете съдържание на урока");
             }
 
-            if(this.homeworkDeadlinePicker.Value != null && string.IsNullOrEmpty(this.txtHomeworkPath.Text))
+            if(this.homeworkDeadlinePicker.Value != null 
+                && string.IsNullOrEmpty(this.txtHomeworkPath.Text))
             {
-                throw new Exception("You must select content for the homework");
+                throw new Exception("Трябва да изберете съдържание за домашното");
             }
         }
 
@@ -129,7 +138,7 @@ namespace VirtualClassroom.TeacherClient
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Invalid input");
+                MessageBox.Show(ex.Message, "Грешно въведена информация");
             }
             
         }
@@ -148,7 +157,7 @@ namespace VirtualClassroom.TeacherClient
                 if(window.HtmlContent.Length > 0)
                 {
                     this.LessonContent = window.HtmlContent;
-                    this.txtContentPath.Text = "[From Editor]";
+                    this.txtContentPath.Text = "[От редактора]";
                     this.txtContentPath.IsEnabled = false;
                 }
             }
@@ -162,7 +171,7 @@ namespace VirtualClassroom.TeacherClient
                 if (window.HtmlContent.Length > 0)
                 {
                     this.HomeworkContent = window.HtmlContent;
-                    this.txtHomeworkPath.Text = "[From Editor]";
+                    this.txtHomeworkPath.Text = "[От редактора]";
                     this.txtHomeworkPath.IsEnabled = false;
                 }
             }
