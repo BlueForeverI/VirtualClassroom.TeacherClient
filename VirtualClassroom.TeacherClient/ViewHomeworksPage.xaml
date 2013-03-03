@@ -2,10 +2,11 @@
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      mc:Ignorable="d" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:TeacherClient="clr-namespace:VirtualClassroom.TeacherClient" mc:Ignorable="d" 
 	Title="Домашни">
-
+    <Page.Resources>
+        <TeacherClient:BoolConverter x:Key="BoolConverter"></TeacherClient:BoolConverter>
+    </Page.Resources>
     <Grid>
         <GroupBox Header="Домашни"
                   Padding="5 10 10 10" HorizontalAlignment="Center">
@@ -16,7 +17,13 @@
                         <DataGridTextColumn Header="Предмет" Binding="{Binding Path=Subject}" />
                         <DataGridTextColumn Header="Урок" Binding="{Binding Path=Lesson}" />
                         <DataGridTextColumn Header="Ученик" Binding="{Binding Path=StudentFullName}" />
-                        <DataGridTextColumn Header="Има оценка" Binding="{Binding Path=HasMark}" />
+                        <DataGridTemplateColumn Header="Има оценка" IsReadOnly="True">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Path=HasMark, Converter={StaticResource BoolConverter}}" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
                     </DataGrid.Columns>
                 </DataGrid>
                 <StackPanel>
