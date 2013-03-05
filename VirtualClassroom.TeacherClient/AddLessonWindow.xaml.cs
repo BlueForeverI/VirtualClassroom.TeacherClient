@@ -100,7 +100,7 @@ namespace VirtualClassroom.TeacherClient
                     lesson.Content = this.LessonContent;
                     lesson.ContentFilename = string.Format("{0}.{1}.{2}.html",
                                                            (this.comboSubjects.SelectedItem as Subject).Name,
-                                                           lesson.Name, lesson.Date.ToShortDateString());
+                                                           lesson.Name, DateTime.Now.ToShortDateString());
                 }
                 else
                 {
@@ -115,7 +115,7 @@ namespace VirtualClassroom.TeacherClient
                     lesson.HomeworkContent = this.HomeworkContent;
                     lesson.HomeworkFilename = string.Format("Homework-{0}.{1}.{2}.html",
                                                            (this.comboSubjects.SelectedItem as Subject).Name,
-                                                           lesson.Name, lesson.Date.ToShortDateString());
+                                                           lesson.Name, DateTime.Now.ToShortDateString());
                 }
                 else
                 {
