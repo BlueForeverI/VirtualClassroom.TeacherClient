@@ -1010,6 +1010,9 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime DateField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool HasMarkField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1031,6 +1034,19 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Date {
+            get {
+                return this.DateField;
+            }
+            set {
+                if ((this.DateField.Equals(value) != true)) {
+                    this.DateField = value;
+                    this.RaisePropertyChanged("Date");
+                }
             }
         }
         

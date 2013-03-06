@@ -126,9 +126,23 @@ namespace VirtualClassroom.TeacherClient
                     }
                 }
 
-                this.Lesson = lesson;
-                this.DialogResult = true;
-                this.Close();
+                if(lesson.HomeworkDeadline == null)
+                {
+                    if(MessageBox.Show("Не сте избрали краен срок за домашното на урока." + 
+                        " По този начин урокът няма да има домашно.\n Искате ли да продължите?",
+                        "Внимание", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+                    {
+                        this.Lesson = lesson;
+                        this.DialogResult = true;
+                        this.Close();
+                    }
+                }
+                else
+                {
+                    this.Lesson = lesson;
+                    this.DialogResult = true;
+                    this.Close();   
+                }
             }
             catch (Exception ex)
             {

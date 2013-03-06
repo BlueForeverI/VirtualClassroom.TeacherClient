@@ -8,6 +8,7 @@
   <xs:element name="ArrayOfHomeworkView" nillable="true" type="tns:ArrayOfHomeworkView" />
   <xs:complexType name="HomeworkView">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
       <xs:element minOccurs="0" name="HasMark" type="xs:boolean" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Lesson" nillable="true" type="xs:string" />

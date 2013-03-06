@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:TeacherClient="clr-namespace:VirtualClassroom.TeacherClient" mc:Ignorable="d" 
 	Title="Домашни">
     <Page.Resources>
-        <TeacherClient:BoolConverter x:Key="BoolConverter"></TeacherClient:BoolConverter>
+        <TeacherClient:BoolConverter x:Key="BoolConverter" />
     </Page.Resources>
     <Grid>
         <GroupBox Header="Домашни"
@@ -17,7 +17,8 @@
                         <DataGridTextColumn Header="Предмет" Binding="{Binding Path=Subject}" />
                         <DataGridTextColumn Header="Урок" Binding="{Binding Path=Lesson}" />
                         <DataGridTextColumn Header="Ученик" Binding="{Binding Path=StudentFullName}" />
-                        <DataGridTemplateColumn Header="Има оценка" IsReadOnly="True">
+                        <DataGridTextColumn Header="Дата" Binding="{Binding Path=Date}" />
+                        <DataGridTemplateColumn Header="Има оценка" SortMemberPath="HasMark">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <Image Source="{Binding Path=HasMark, Converter={StaticResource BoolConverter}}" />

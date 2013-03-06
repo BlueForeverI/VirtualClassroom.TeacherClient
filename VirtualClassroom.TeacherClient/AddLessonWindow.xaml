@@ -9,7 +9,7 @@
         <StackPanel>
             <WrapPanel Margin="10">
                 <Label>Име: </Label>
-                <TextBox x:Name="txtName" Width="150" Margin="10 0 0 0"/>
+                <TextBox x:Name="txtName" Width="275" Margin="10 0 0 0"/>
             </WrapPanel>
             <WrapPanel Margin="10">
                 <Label>Предмет: </Label>
