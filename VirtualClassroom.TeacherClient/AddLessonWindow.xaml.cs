@@ -113,7 +113,7 @@ namespace VirtualClassroom.TeacherClient
                 {
 
                     lesson.HomeworkContent = this.HomeworkContent;
-                    lesson.HomeworkFilename = string.Format("Homework-{0}.{1}.{2}.html",
+                    lesson.HomeworkFilename = string.Format("Домашно-{0}.{1}.{2}.html",
                                                            (this.comboSubjects.SelectedItem as Subject).Name,
                                                            lesson.Name, DateTime.Now.ToShortDateString());
                 }
