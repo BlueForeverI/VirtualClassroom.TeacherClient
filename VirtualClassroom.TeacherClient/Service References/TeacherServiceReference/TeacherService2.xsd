@@ -152,4 +152,30 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="AddTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="test" nillable="true" type="q12:Test" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTestResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestsByTeacher">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="teacherId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTestsByTeacherResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/VirtualClassroom.Services.Models" minOccurs="0" name="GetTestsByTeacherResult" nillable="true" type="q13:ArrayOfTest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

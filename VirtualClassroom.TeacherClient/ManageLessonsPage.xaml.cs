@@ -15,7 +15,6 @@ namespace VirtualClassroom.TeacherClient
     public partial class ManageLessonsPage : Page
     {
         private TeacherServiceClient client = ClientManager.GetClient();
-        private int id = MainWindow.Teacher.Id;
 
         public ManageLessonsPage()
         {
@@ -69,7 +68,7 @@ namespace VirtualClassroom.TeacherClient
                     if (MessageBox.Show("Наистина ли искате да премахнете избраните уроци?", "Сигурен ли сте?",
                                         MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
-                        client.RemoveLessons(lessons.ToArray());
+                        client.RemoveLessons(lessons);
                         MessageBox.Show("Уроците бяха премахнати успешно");
                         this.dataGridLessons.ItemsSource = client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
                     }

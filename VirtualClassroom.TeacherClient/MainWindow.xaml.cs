@@ -67,5 +67,17 @@ namespace VirtualClassroom.TeacherClient
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnManageTests_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.frameMainContent.Source = new Uri("ManageTestsPage.xaml", UriKind.Relative);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

@@ -72,6 +72,9 @@
     <Compile Include="AddMarkWindow.xaml.cs">
       <DependentUpon>AddMarkWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddTestWindow.xaml.cs">
+      <DependentUpon>AddTestWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BoolConverter.cs" />
     <Compile Include="ClientManager.cs" />
     <Compile Include="Crypto.cs" />
@@ -86,6 +89,9 @@
     </Compile>
     <Compile Include="ManageLessonsPage.xaml.cs">
       <DependentUpon>ManageLessonsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ManageTestsPage.xaml.cs">
+      <DependentUpon>ManageTestsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service References\TeacherServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -103,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddMarkWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddTestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -131,6 +141,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageLessonsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ManageTestsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -202,6 +216,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Teacher.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Test.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
   </ItemGroup>

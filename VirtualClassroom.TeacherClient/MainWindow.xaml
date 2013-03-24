@@ -10,6 +10,7 @@
             <WrapPanel x:Name="navigation" VerticalAlignment="Top" HorizontalAlignment="Center"  Margin="0 10 0 20">
                 <Button x:Name="btnManageLessons" Click="btnManageLessons_Click" Padding="20" >Уроци</Button>
                 <Button x:Name="btnViewHomeworks" Click="btnViewHomeworks_Click" Padding="20">Домашни</Button>
+                <Button x:Name="btnManageTests" Click="btnManageTests_Click" Padding="20">Тестове</Button>
                 <Button x:Name="btnViewMarks" Click="btnViewMarks_Click" Padding="20">Оценки</Button>
             </WrapPanel>
            

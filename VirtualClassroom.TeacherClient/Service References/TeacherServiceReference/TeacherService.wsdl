@@ -85,6 +85,18 @@
   <wsdl:message name="ITeacherService_DownloadSubmittedHomework_OutputMessage">
     <wsdl:part name="parameters" element="tns:DownloadSubmittedHomeworkResponse" />
   </wsdl:message>
+  <wsdl:message name="ITeacherService_AddTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTest" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_AddTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_GetTestsByTeacher_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestsByTeacher" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_GetTestsByTeacher_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTestsByTeacherResponse" />
+  </wsdl:message>
   <wsdl:portType msc:usingSession="true" name="ITeacherService">
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="LoginTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/LoginTeacher" message="tns:ITeacherService_LoginTeacher_InputMessage" />
@@ -129,6 +141,14 @@
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DownloadSubmittedHomework">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/DownloadSubmittedHomework" message="tns:ITeacherService_DownloadSubmittedHomework_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/DownloadSubmittedHomeworkResponse" message="tns:ITeacherService_DownloadSubmittedHomework_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="AddTest">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/AddTest" message="tns:ITeacherService_AddTest_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/AddTestResponse" message="tns:ITeacherService_AddTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetTestsByTeacher">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetTestsByTeacher" message="tns:ITeacherService_GetTestsByTeacher_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetTestsByTeacherResponse" message="tns:ITeacherService_GetTestsByTeacher_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_ITeacherService" type="tns:ITeacherService">
@@ -226,6 +246,24 @@
     </wsdl:operation>
     <wsdl:operation name="DownloadSubmittedHomework">
       <soap12:operation soapAction="http://tempuri.org/ITeacherService/DownloadSubmittedHomework" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTest">
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/AddTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTestsByTeacher">
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/GetTestsByTeacher" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
