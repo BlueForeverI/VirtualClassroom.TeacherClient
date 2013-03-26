@@ -129,6 +129,7 @@
   <xs:element name="ArrayOfTest" nillable="true" type="tns:ArrayOfTest" />
   <xs:complexType name="Test">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Questions" nillable="true" type="tns:ArrayOfQuestion" />
       <xs:element minOccurs="0" name="SubjectId" type="xs:int" />
@@ -146,7 +147,6 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Answers" nillable="true" type="tns:ArrayOfAnswer" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="SelectedAnswer" nillable="true" type="tns:Answer" />
       <xs:element minOccurs="0" name="TestId" type="xs:int" />
       <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -162,7 +162,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="IsCorrect" type="xs:boolean" />
-      <xs:element minOccurs="0" name="QuestionId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSelected" type="xs:boolean" />
       <xs:element minOccurs="0" name="Text" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>

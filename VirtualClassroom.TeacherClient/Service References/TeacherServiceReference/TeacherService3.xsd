@@ -53,4 +53,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="MarkView" nillable="true" type="tns:MarkView" />
+  <xs:complexType name="ArrayOfTestView">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TestView" nillable="true" type="tns:TestView" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTestView" nillable="true" type="tns:ArrayOfTestView" />
+  <xs:complexType name="TestView">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TestView" nillable="true" type="tns:TestView" />
 </xs:schema>

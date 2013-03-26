@@ -34,6 +34,7 @@ namespace VirtualClassroom.TeacherClient
                 this.Test = new Test();
                 this.comboSubjects.ItemsSource = 
                     client.GetSubjectsByTeacher(MainWindow.Teacher.Id).ToList();
+                this.stackPanelQuestion.Visibility = Visibility.Hidden;
             }
             catch (Exception ex)
             {
@@ -63,6 +64,7 @@ namespace VirtualClassroom.TeacherClient
         private void listBoxQuestions_SelectionChanged(object sender, 
             SelectionChangedEventArgs e)
         {
+            this.stackPanelQuestion.Visibility = Visibility.Visible;
             this.stackPanelQuestion.DataContext = 
                 this.questions[this.listBoxQuestions.SelectedIndex];
         }
@@ -101,7 +103,43 @@ namespace VirtualClassroom.TeacherClient
 
         private void ValidateInput()
         {
-            // implement validation
+            if(string.IsNullOrEmpty(this.txtTitle.Text) || 
+                string.IsNullOrWhiteSpace(this.txtTitle.Text))
+            {
+                throw new Exception("Не сте въвели име на теста");
+            }
+
+            if(questions.Count == 0)
+            {
+                throw new Exception("Не сте добавили въпроси към теста");
+            }
+
+            if(questions.Any(q => string.IsNullOrEmpty(q.Text) || 
+                string.IsNullOrWhiteSpace(q.Text)))
+            {
+                throw new Exception("Не сте въвели текст на някой от въпросите");
+            }
+
+            if(questions.Any(q => q.Answers == null))
+            {
+                throw new Exception("Някой от въпросите нямат отговори");
+            }
+
+            if(questions.Any(q => q.Answers.Count == 0))
+            {
+                throw new Exception("Някой от въпросите нямат отговори");
+            }
+
+            if(questions.Any(q => q.Answers.Any(a => 
+                string.IsNullOrEmpty(a.Text) || string.IsNullOrWhiteSpace(a.Text))))
+            {
+                throw new Exception("Не сте въвели текст на някой от отговорите");
+            }
+
+            if(questions.Any(q => !q.Answers.Any(a => a.IsCorrect)))
+            {
+                throw new Exception("Не сте избрали верен отговор за някой от въпросите");
+            }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

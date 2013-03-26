@@ -24,7 +24,15 @@ namespace VirtualClassroom.TeacherClient
 
         public ManageTestsPage()
         {
-            InitializeComponent();
+            try
+            {
+                InitializeComponent();
+                this.dataGridTests.ItemsSource = client.GetTestsByTeacher(MainWindow.Teacher.Id);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnAddTest_Click(object sender, RoutedEventArgs e)
@@ -36,6 +44,7 @@ namespace VirtualClassroom.TeacherClient
                 {
                     client.AddTest(window.Test);
                     MessageBox.Show("Тестът беше добавен успешно!");
+                    this.dataGridTests.ItemsSource = client.GetTestsByTeacher(MainWindow.Teacher.Id);
                 }
                 catch (Exception ex)
                 {

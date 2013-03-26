@@ -221,6 +221,9 @@
     <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.Test.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\TeacherServiceReference\VirtualClassroom.TeacherClient.TeacherServiceReference.TestView.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
