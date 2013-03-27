@@ -103,6 +103,12 @@
   <wsdl:message name="ITeacherService_GetTest_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetTestResponse" />
   </wsdl:message>
+  <wsdl:message name="ITeacherService_RemoveTests_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTests" />
+  </wsdl:message>
+  <wsdl:message name="ITeacherService_RemoveTests_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveTestsResponse" />
+  </wsdl:message>
   <wsdl:portType msc:usingSession="true" name="ITeacherService">
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="LoginTeacher">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/LoginTeacher" message="tns:ITeacherService_LoginTeacher_InputMessage" />
@@ -159,6 +165,10 @@
     <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetTest">
       <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/GetTest" message="tns:ITeacherService_GetTest_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/GetTestResponse" message="tns:ITeacherService_GetTest_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="RemoveTests">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITeacherService/RemoveTests" message="tns:ITeacherService_RemoveTests_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITeacherService/RemoveTestsResponse" message="tns:ITeacherService_RemoveTests_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_ITeacherService" type="tns:ITeacherService">
@@ -283,6 +293,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetTest">
       <soap12:operation soapAction="http://tempuri.org/ITeacherService/GetTest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveTests">
+      <soap12:operation soapAction="http://tempuri.org/ITeacherService/RemoveTests" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

@@ -593,6 +593,9 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MaxScoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Collections.Generic.List<VirtualClassroom.TeacherClient.TeacherServiceReference.Question> QuestionsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -633,6 +636,19 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MaxScore {
+            get {
+                return this.MaxScoreField;
+            }
+            set {
+                if ((this.MaxScoreField.Equals(value) != true)) {
+                    this.MaxScoreField = value;
+                    this.RaisePropertyChanged("MaxScore");
                 }
             }
         }
@@ -1795,6 +1811,12 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int MaxScoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int ScoreField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SubjectField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -1832,6 +1854,32 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
                 if ((this.IdField.Equals(value) != true)) {
                     this.IdField = value;
                     this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int MaxScore {
+            get {
+                return this.MaxScoreField;
+            }
+            set {
+                if ((this.MaxScoreField.Equals(value) != true)) {
+                    this.MaxScoreField = value;
+                    this.RaisePropertyChanged("MaxScore");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Score {
+            get {
+                return this.ScoreField;
+            }
+            set {
+                if ((this.ScoreField.Equals(value) != true)) {
+                    this.ScoreField = value;
+                    this.RaisePropertyChanged("Score");
                 }
             }
         }
@@ -1917,6 +1965,9 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/GetTest", ReplyAction="http://tempuri.org/ITeacherService/GetTestResponse")]
         VirtualClassroom.TeacherClient.TeacherServiceReference.Test GetTest(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITeacherService/RemoveTests", ReplyAction="http://tempuri.org/ITeacherService/RemoveTestsResponse")]
+        void RemoveTests(System.Collections.Generic.List<VirtualClassroom.TeacherClient.TeacherServiceReference.Test> tests);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -2000,6 +2051,10 @@ namespace VirtualClassroom.TeacherClient.TeacherServiceReference {
         
         public VirtualClassroom.TeacherClient.TeacherServiceReference.Test GetTest(int id) {
             return base.Channel.GetTest(id);
+        }
+        
+        public void RemoveTests(System.Collections.Generic.List<VirtualClassroom.TeacherClient.TeacherServiceReference.Test> tests) {
+            base.Channel.RemoveTests(tests);
         }
     }
 }

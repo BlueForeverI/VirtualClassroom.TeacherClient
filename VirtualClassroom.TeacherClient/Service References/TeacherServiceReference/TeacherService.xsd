@@ -131,6 +131,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="Date" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxScore" type="xs:int" />
       <xs:element minOccurs="0" name="Questions" nillable="true" type="tns:ArrayOfQuestion" />
       <xs:element minOccurs="0" name="SubjectId" type="xs:int" />
       <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />

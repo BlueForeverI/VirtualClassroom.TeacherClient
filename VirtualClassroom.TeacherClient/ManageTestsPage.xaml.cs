@@ -55,7 +55,35 @@ namespace VirtualClassroom.TeacherClient
 
         private void btnRemoveTests_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                List<Test> tests = new List<Test>();
 
+                foreach (dynamic selected in this.dataGridTests.SelectedItems)
+                {
+                    int id = int.Parse(selected.Id.ToString());
+                    tests.Add(new Test() { Id = id });
+                }
+
+                if(tests.Count == 0)
+                {
+                    MessageBox.Show("Не сте избрали тестове");
+                }
+                else
+                {
+                    if(MessageBox.Show("Наистина ли искате да премахнете избраните тестове?",
+                         "Сигурен ли сте?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                    {
+                        client.RemoveTests(tests);
+                        MessageBox.Show("Тестовете бяха премахнати успешно");
+                        this.dataGridTests.ItemsSource = client.GetTestsByTeacher(MainWindow.Teacher.Id);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
