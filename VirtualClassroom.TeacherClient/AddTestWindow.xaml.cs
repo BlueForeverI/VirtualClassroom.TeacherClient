@@ -64,9 +64,16 @@ namespace VirtualClassroom.TeacherClient
         private void listBoxQuestions_SelectionChanged(object sender, 
             SelectionChangedEventArgs e)
         {
-            this.stackPanelQuestion.Visibility = Visibility.Visible;
-            this.stackPanelQuestion.DataContext = 
-                this.questions[this.listBoxQuestions.SelectedIndex];
+            if (listBoxQuestions.SelectedIndex >= 0)
+            {
+                this.stackPanelQuestion.Visibility = Visibility.Visible;
+                this.stackPanelQuestion.DataContext =
+                    this.questions[this.listBoxQuestions.SelectedIndex];
+            }
+            else
+            {
+                this.stackPanelQuestion.Visibility = Visibility.Hidden;
+            }
         }
 
         private void btnRemoveAnswer_Click(object sender, RoutedEventArgs e)
@@ -146,6 +153,26 @@ namespace VirtualClassroom.TeacherClient
         {
             this.DialogResult = false;
             this.Close();
+        }
+
+        private void btnRemoveQuestion_Click(object sender, RoutedEventArgs e)
+        {
+            var index = this.listBoxQuestions.SelectedIndex;
+            if(index < 0)
+            {
+                MessageBox.Show("Не сте избрали въпрос");
+            }
+            else
+            {
+                this.questions.RemoveAt(index);
+                this.listBoxQuestions.Items.RemoveAt(index);
+
+                for (int i = 0; i < this.listBoxQuestions.Items.Count; i++)
+                {
+                    this.listBoxQuestions.Items[i] = string.Format("Въпрос #{0}",
+                        i + 1);
+                }
+            }
         }
     }
 }

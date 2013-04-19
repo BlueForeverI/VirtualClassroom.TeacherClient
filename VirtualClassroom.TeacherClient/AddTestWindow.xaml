@@ -34,6 +34,7 @@
                             </ListBox.ItemTemplate>
                         </ListBox>  
                         <Button x:Name="btnAddQuestion" Click="btnAddQuestion_Click">Добави въпрос</Button>
+                        <Button x:Name="btnRemoveQuestion" Click="btnRemoveQuestion_Click">Премахни въпрос</Button>
                     </StackPanel>
                 </GroupBox>
                 <StackPanel Margin="10" x:Name="stackPanelQuestion">
