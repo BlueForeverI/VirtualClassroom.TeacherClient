@@ -13,7 +13,7 @@ namespace VirtualClassroom.TeacherClient
         {
             LoginWindow loginWindow = new LoginWindow();
 
-            if(loginWindow.ShowDialog() == true)
+            if (loginWindow.ShowDialog() == true)
             {
                 Teacher = loginWindow.Teacher;
                 InitializeComponent();
@@ -31,7 +31,7 @@ namespace VirtualClassroom.TeacherClient
         {
             try
             {
-                this.frameMainContent.Source = new Uri("ManageLessonsPage.xaml", UriKind.Relative);  
+                this.frameMainContent.Source = new Uri("Pages/ManageLessonsPage.xaml", UriKind.Relative);  
             }
             catch (Exception ex)
             {
@@ -43,7 +43,7 @@ namespace VirtualClassroom.TeacherClient
         {
             try
             {
-                this.frameMainContent.Source = new Uri("ViewHomeworksPage.xaml", UriKind.Relative);
+                this.frameMainContent.Source = new Uri("Pages/ViewHomeworksPage.xaml", UriKind.Relative);
             }
             catch (Exception ex)
             {
@@ -60,7 +60,7 @@ namespace VirtualClassroom.TeacherClient
         {
             try
             {
-                this.frameMainContent.Source = new Uri("ViewMarksPage.xaml", UriKind.Relative);
+                this.frameMainContent.Source = new Uri("Pages/ViewMarksPage.xaml", UriKind.Relative);
             }
             catch (Exception ex)
             {
@@ -72,7 +72,7 @@ namespace VirtualClassroom.TeacherClient
         {
             try
             {
-                this.frameMainContent.Source = new Uri("ManageTestsPage.xaml", UriKind.Relative);
+                this.frameMainContent.Source = new Uri("Pages/ManageTestsPage.xaml", UriKind.Relative);
             }
             catch (Exception ex)
             {

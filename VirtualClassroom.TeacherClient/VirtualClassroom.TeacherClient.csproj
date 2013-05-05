@@ -66,31 +66,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddLessonWindow.xaml.cs">
+    <Compile Include="Windows\AddLessonWindow.xaml.cs">
       <DependentUpon>AddLessonWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddMarkWindow.xaml.cs">
+    <Compile Include="Windows\AddMarkWindow.xaml.cs">
       <DependentUpon>AddMarkWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AddTestWindow.xaml.cs">
+    <Compile Include="Windows\AddTestWindow.xaml.cs">
       <DependentUpon>AddTestWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BoolConverter.cs" />
-    <Compile Include="ClientManager.cs" />
-    <Compile Include="Crypto.cs" />
-    <Compile Include="DocumentEditor.xaml.cs">
+    <Compile Include="Utils\BoolConverter.cs" />
+    <Compile Include="Utils\ClientManager.cs" />
+    <Compile Include="Utils\Crypto.cs" />
+    <Compile Include="Windows\DocumentEditor.xaml.cs">
       <DependentUpon>DocumentEditor.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EditorWindow.xaml.cs">
+    <Compile Include="Windows\EditorWindow.xaml.cs">
       <DependentUpon>EditorWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LoginWindow.xaml.cs">
+    <Compile Include="Windows\LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageLessonsPage.xaml.cs">
+    <Compile Include="Pages\ManageLessonsPage.xaml.cs">
       <DependentUpon>ManageLessonsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ManageTestsPage.xaml.cs">
+    <Compile Include="Pages\ManageTestsPage.xaml.cs">
       <DependentUpon>ManageTestsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Service References\TeacherServiceReference\Reference.cs">
@@ -98,33 +98,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="ViewHomeworksPage.xaml.cs">
+    <Compile Include="Pages\ViewHomeworksPage.xaml.cs">
       <DependentUpon>ViewHomeworksPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewMarksPage.xaml.cs">
+    <Compile Include="Pages\ViewMarksPage.xaml.cs">
       <DependentUpon>ViewMarksPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="AddLessonWindow.xaml">
+    <Page Include="Windows\AddLessonWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddMarkWindow.xaml">
+    <Page Include="Windows\AddMarkWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="AddTestWindow.xaml">
+    <Page Include="Windows\AddTestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DocumentEditor.xaml">
+    <Page Include="Windows\DocumentEditor.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="EditorWindow.xaml">
+    <Page Include="Windows\EditorWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LoginWindow.xaml">
+    <Page Include="Windows\LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,11 +140,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="ManageLessonsPage.xaml">
+    <Page Include="Pages\ManageLessonsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ManageTestsPage.xaml">
+    <Page Include="Pages\ManageTestsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,11 +152,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ViewHomeworksPage.xaml">
+    <Page Include="Pages\ViewHomeworksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ViewMarksPage.xaml">
+    <Page Include="Pages\ViewMarksPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -247,32 +247,32 @@
     <None Include="Service References\TeacherServiceReference\TeacherService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\Bold.png" />
-    <Resource Include="Images\Bullets.png" />
-    <Resource Include="Images\CenterAlign.png" />
-    <Resource Include="Images\Copy.png" />
-    <Resource Include="Images\Cut.png" />
-    <Resource Include="Images\Delete.png" />
-    <Resource Include="Images\Indent.png" />
-    <Resource Include="Images\IndentRemove.png" />
-    <Resource Include="Images\Italic.png" />
-    <Resource Include="Images\JustifyAlign.png" />
-    <Resource Include="Images\LeftAlign.png" />
-    <Resource Include="Images\Numbering.png" />
-    <Resource Include="Images\Paste.png" />
-    <Resource Include="Images\Redo.png" />
-    <Resource Include="Images\RightAlign.png" />
-    <Resource Include="Images\Subscript.png" />
-    <Resource Include="Images\Superscript.png" />
-    <Resource Include="Images\Underline.png" />
-    <Resource Include="Images\Undo.png" />
+    <Resource Include="Windows\Images\Bold.png" />
+    <Resource Include="Windows\Images\Bullets.png" />
+    <Resource Include="Windows\Images\CenterAlign.png" />
+    <Resource Include="Windows\Images\Copy.png" />
+    <Resource Include="Windows\Images\Cut.png" />
+    <Resource Include="Windows\Images\Delete.png" />
+    <Resource Include="Windows\Images\Indent.png" />
+    <Resource Include="Windows\Images\IndentRemove.png" />
+    <Resource Include="Windows\Images\Italic.png" />
+    <Resource Include="Windows\Images\JustifyAlign.png" />
+    <Resource Include="Windows\Images\LeftAlign.png" />
+    <Resource Include="Windows\Images\Numbering.png" />
+    <Resource Include="Windows\Images\Paste.png" />
+    <Resource Include="Windows\Images\Redo.png" />
+    <Resource Include="Windows\Images\RightAlign.png" />
+    <Resource Include="Windows\Images\Subscript.png" />
+    <Resource Include="Windows\Images\Superscript.png" />
+    <Resource Include="Windows\Images\Underline.png" />
+    <Resource Include="Windows\Images\Undo.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="school.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\False.png" />
-    <Resource Include="Images\True.png" />
+    <Resource Include="Windows\Images\False.png" />
+    <Resource Include="Windows\Images\True.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

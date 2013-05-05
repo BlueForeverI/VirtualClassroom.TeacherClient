@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Dev\Projects\VirtualClassroom.TeacherClient\VirtualClassroom.TeacherClient\App.xaml
-12-1663525804
+121190278067
 
-20-2078206804
+20568529163
 16-1962079680
-AddLessonWindow.xaml;AddMarkWindow.xaml;AddTestWindow.xaml;DocumentEditor.xaml;EditorWindow.xaml;LoginWindow.xaml;MainWindow.xaml;ManageLessonsPage.xaml;ManageTestsPage.xaml;Theme.xaml;ViewHomeworksPage.xaml;ViewMarksPage.xaml;
+Windows\AddLessonWindow.xaml;Windows\AddMarkWindow.xaml;Windows\AddTestWindow.xaml;Windows\DocumentEditor.xaml;Windows\EditorWindow.xaml;Windows\LoginWindow.xaml;MainWindow.xaml;Pages\ManageLessonsPage.xaml;Pages\ManageTestsPage.xaml;Theme.xaml;Pages\ViewHomeworksPage.xaml;Pages\ViewMarksPage.xaml;
 
 False
 
