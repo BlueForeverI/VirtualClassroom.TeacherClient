@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
@@ -19,15 +20,24 @@ namespace VirtualClassroom.TeacherClient
             try
             {
                 InitializeComponent();
-
-                this.dataGridHomeworks.ItemsSource = 
-                    client.GetHomeworkViewsByTeacher(MainWindow.Teacher.Id);
+                UpdateHomeworkViews();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(Application.Current.Resources["defaultErrorMessage"].ToString(), 
                     "Грешка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void UpdateHomeworkViews()
+        {
+            Thread thread = new Thread(() => Dispatcher.BeginInvoke(
+                new Action(() =>
+                {
+                    var homeworks = client.GetHomeworkViewsByTeacher(MainWindow.Teacher.Id);
+                    this.dataGridHomeworks.ItemsSource = homeworks;
+                })));
+            thread.Start();
         }
 
         private void btnDownloadHomework_Click(object sender, RoutedEventArgs e)
@@ -56,7 +66,7 @@ namespace VirtualClassroom.TeacherClient
                                                     new UTF8Encoding(true).GetString(homework.Content),
                                                     new UTF8Encoding(true));
 
-                        MessageBox.Show("Домашното беше изпратено успешно");
+                        MessageBox.Show("Домашното беше изтеглено успешно");
                     }
                 }
             }
@@ -100,8 +110,7 @@ namespace VirtualClassroom.TeacherClient
                             client.AddMark(new Mark() 
                                 { HomeworkId = homeworkId, Value = mark });
 
-                            this.dataGridHomeworks.ItemsSource = 
-                                client.GetHomeworkViewsByTeacher(MainWindow.Teacher.Id);
+                            UpdateHomeworkViews();
 
                             MessageBox.Show("Оценката беше добавена успешно");
                         }   

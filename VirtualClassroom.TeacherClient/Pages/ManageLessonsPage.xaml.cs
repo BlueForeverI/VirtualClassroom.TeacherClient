@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using Microsoft.Win32;
@@ -21,15 +22,24 @@ namespace VirtualClassroom.TeacherClient
             try
             {
                 InitializeComponent();
-                this.dataGridLessons.Items.Clear();
-                var lessons = client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
-                this.dataGridLessons.ItemsSource = lessons;
+                UpdateLessonViews();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(Application.Current.Resources["defaultErrorMessage"].ToString(), 
                     "Грешка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void UpdateLessonViews()
+        {
+            Thread thread = new Thread(() => Dispatcher.BeginInvoke(
+                new Action(() =>
+                {
+                    var lessons = client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
+                    this.dataGridLessons.ItemsSource = lessons;
+                })));
+            thread.Start();
         }
 
         private void btnAddLesson_Click(object sender, RoutedEventArgs e)
@@ -40,9 +50,8 @@ namespace VirtualClassroom.TeacherClient
                 if (addLessonWindow.ShowDialog() == true)
                 {
                     client.AddLesson(addLessonWindow.Lesson);
+                    UpdateLessonViews();
                     MessageBox.Show("Урокът беше добавен успешно");
-                    this.dataGridLessons.ItemsSource = 
-                        client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
                 }
             }
             catch (Exception ex)
@@ -74,9 +83,8 @@ namespace VirtualClassroom.TeacherClient
                         "Сигурен ли сте?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveLessons(lessons);
+                        UpdateLessonViews();
                         MessageBox.Show("Уроците бяха премахнати успешно");
-                        this.dataGridLessons.ItemsSource = 
-                            client.GetLessonViewsByTeacher(MainWindow.Teacher.Id);
                     }
                 }
             }

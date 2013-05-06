@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -27,14 +28,25 @@ namespace VirtualClassroom.TeacherClient
             try
             {
                 InitializeComponent();
-                this.dataGridTests.ItemsSource = 
-                    client.GetTestsByTeacher(MainWindow.Teacher.Id);
+                UpdateTestViews();
+                    
             }
             catch (Exception ex)
             {
                 MessageBox.Show(Application.Current.Resources["defaultErrorMessage"].ToString(), 
                     "Грешка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void UpdateTestViews()
+        {
+            Thread thread = new Thread(() => Dispatcher.BeginInvoke(
+                new Action(() =>
+                {
+                    var tests = client.GetTestsByTeacher(MainWindow.Teacher.Id);
+                    this.dataGridTests.ItemsSource = tests;
+                })));
+            thread.Start();
         }
 
         private void btnAddTest_Click(object sender, RoutedEventArgs e)
@@ -45,9 +57,8 @@ namespace VirtualClassroom.TeacherClient
                 try
                 {
                     client.AddTest(window.Test);
+                    UpdateTestViews();
                     MessageBox.Show("Тестът беше добавен успешно!");
-                    this.dataGridTests.ItemsSource = 
-                        client.GetTestsByTeacher(MainWindow.Teacher.Id);
                 }
                 catch (Exception ex)
                 {
@@ -79,9 +90,8 @@ namespace VirtualClassroom.TeacherClient
                          "Сигурен ли сте?", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                     {
                         client.RemoveTests(tests);
+                        UpdateTestViews();
                         MessageBox.Show("Тестовете бяха премахнати успешно");
-                        this.dataGridTests.ItemsSource = 
-                            client.GetTestsByTeacher(MainWindow.Teacher.Id);
                     }
                 }
             }
