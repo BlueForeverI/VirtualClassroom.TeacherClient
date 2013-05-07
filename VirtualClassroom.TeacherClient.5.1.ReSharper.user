@@ -13,7 +13,6 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:Theme.xaml" caret="118627" fromTop="12" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:LoginWindow.xaml" caret="496" fromTop="8" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:App.xaml.cs" caret="310" fromTop="12" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Utils/f:Crypto.cs" caret="7147" fromTop="169" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Utils/f:ClientManager.cs" caret="730" fromTop="23" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:AddMarkWindow.xaml" caret="396" fromTop="5" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml" caret="942" fromTop="12" />
@@ -33,17 +32,15 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:AddTestWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="13459" fromTop="0" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:EditorWindow.xaml.cs" caret="0" fromTop="0" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:LoginWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml.cs" caret="385" fromTop="14" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ManageLessonsPage.xaml.cs" caret="1006" fromTop="19" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ManageTestsPage.xaml.cs" caret="1228" fromTop="17" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ViewMarksPage.xaml.cs" caret="867" fromTop="21" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ViewHomeworksPage.xaml.cs" caret="633" fromTop="0" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Utils/f:Crypto.cs" caret="6416" fromTop="24" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:LoginWindow.xaml.cs" caret="363" fromTop="12" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="6583" fromTop="4" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="7445" fromTop="17" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="7876" fromTop="8" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="8311" fromTop="19" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="13459" fromTop="11" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml.cs" caret="1194" fromTop="20" />
@@ -71,6 +68,9 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ViewHomeworksPage.xaml.cs" caret="2608" fromTop="24" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ViewHomeworksPage.xaml.cs" caret="4346" fromTop="26" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ViewHomeworksPage.xaml.cs" caret="633" fromTop="18" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Utils/f:Crypto.cs" caret="5704" fromTop="3" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Utils/f:Crypto.cs" caret="6416" fromTop="24" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:LoginWindow.xaml.cs" caret="1008" fromTop="17" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>

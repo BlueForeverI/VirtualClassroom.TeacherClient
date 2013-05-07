@@ -31,7 +31,7 @@ namespace VirtualClassroom.TeacherClient
 
             worker.DoWork += (o, ea) =>
             {
-                string secret = Crypto.GenerateRandomSecret(30);
+                string secret = Crypto.GenerateRandomSecret();
                 teacher = client.LoginTeacher(Crypto.EncryptStringAES(username, secret),
                     Crypto.EncryptStringAES(password, secret), secret);
             };
