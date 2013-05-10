@@ -61,6 +61,12 @@ namespace VirtualClassroom.TeacherClient
             {
                 throw new Exception("Трябва да изберете съдържание за домашното");
             }
+
+            if(this.homeworkDeadlinePicker.Value != null &&
+                this.homeworkDeadlinePicker.Value < DateTime.Now)
+            {
+                throw new Exception("Невалиден краен срок за домашното");
+            }
         }
 
         private void btnBrowseContent_Click(object sender, RoutedEventArgs e)

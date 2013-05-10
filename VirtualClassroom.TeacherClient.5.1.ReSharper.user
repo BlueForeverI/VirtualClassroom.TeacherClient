@@ -27,7 +27,6 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ViewHomeworksPage.xaml" caret="910" fromTop="6" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ViewMarksPage.xaml" caret="520" fromTop="11" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:App.xaml" caret="935" fromTop="16" />
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:AddLessonWindow.xaml.cs" caret="1030" fromTop="0" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:AddMarkWindow.xaml.cs" caret="1360" fromTop="16" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:AddTestWindow.xaml.cs" caret="0" fromTop="0" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="13459" fromTop="0" />
@@ -39,9 +38,9 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Pages/f:ViewHomeworksPage.xaml.cs" caret="633" fromTop="0" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Utils/f:Crypto.cs" caret="6416" fromTop="24" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:LoginWindow.xaml.cs" caret="363" fromTop="12" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:AddLessonWindow.xaml.cs" caret="2348" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="8311" fromTop="19" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:DocumentEditor.xaml.cs" caret="13459" fromTop="11" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml.cs" caret="1194" fromTop="20" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/f:MainWindow.xaml.cs" caret="1692" fromTop="18" />
@@ -71,6 +70,7 @@
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Utils/f:Crypto.cs" caret="5704" fromTop="3" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Utils/f:Crypto.cs" caret="6416" fromTop="24" />
       <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:LoginWindow.xaml.cs" caret="1008" fromTop="17" />
+      <File id="F95FEF7B-2702-4A05-B504-C1593DB630AC/d:Windows/f:AddLessonWindow.xaml.cs" caret="2348" fromTop="16" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -87,16 +87,16 @@
     <ItemStatistics item="Default">
       <Item value="static" priority="4" />
       <Item value="TeacherServiceClient`0" priority="1" />
-      <Item value="null" priority="7" />
+      <Item value="null" priority="8" />
       <Item value="public" priority="10" />
-      <Item value="if" priority="39" />
+      <Item value="if" priority="40" />
       <Item value="clientInstance" priority="4" />
       <Item value="new" priority="43" />
       <Item value="TeacherServiceClient" priority="0" />
       <Item value="return" priority="0" />
       <Item value="private" priority="9" />
       <Item value="int" priority="13" />
-      <Item value="this" priority="114" />
+      <Item value="this" priority="116" />
       <Item value="loginWindow" priority="2" />
       <Item value="App`0" priority="0" />
       <Item value="Resources" priority="2" />
@@ -132,7 +132,7 @@
       <Item value="as" priority="14" />
       <Item value="Subject`0" priority="3" />
       <Item value="txtContentPath" priority="0" />
-      <Item value="DateTime`0" priority="4" />
+      <Item value="DateTime`0" priority="5" />
       <Item value="File`0" priority="5" />
       <Item value="txtHomeworkPath" priority="1" />
       <Item value="txtHomeworkDeadline" priority="0" />
@@ -199,7 +199,7 @@
       <Item value="throw" priority="12" />
       <Item value="Exception" priority="10" />
       <Item value="AbandonedMutexException" priority="0" />
-      <Item value="Exception`0" priority="4" />
+      <Item value="Exception`0" priority="5" />
       <Item value="catch" priority="2" />
       <Item value="hasMark" priority="0" />
       <Item value="LessonView`0" priority="0" />
@@ -254,7 +254,7 @@
       <Item value="c" priority="2" />
       <Item value="q" priority="3" />
       <Item value="a" priority="2" />
-      <Item value="thr" priority="0" />
+      <Item value="thr" priority="1" />
       <Item value="Visibility`0" priority="2" />
       <Item value="Test`0" priority="0" />
       <Item value="List&lt;Test&gt;" priority="0" />
@@ -352,7 +352,7 @@
       <Item value="client" priority="0" />
       <Item value="Close`0" priority="1" />
       <Item value="datePicker" priority="0" />
-      <Item value="homeworkDeadlinePicker" priority="1" />
+      <Item value="homeworkDeadlinePicker" priority="3" />
       <Item value="LessonContent" priority="3" />
       <Item value="HomeworkContent" priority="1" />
       <Item value="txtName" priority="1" />
@@ -380,7 +380,7 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.DateTime">
       <Item value="Parse`0" priority="1" />
-      <Item value="Now" priority="0" />
+      <Item value="Now" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.Windows.MessageBox">
       <Item value="Show`0" priority="29" />
@@ -431,7 +431,7 @@
       <Item value="TryParse`0" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:Xceed.Wpf.Toolkit.DateTimePicker">
-      <Item value="Value" priority="2" />
+      <Item value="Value" priority="4" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Windows.Controls.PasswordBox">
       <Item value="Password" priority="0" />
